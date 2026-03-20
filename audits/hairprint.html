@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Audit — Hairprint | MRKT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       MRKT Brand Audit — Master Stylesheet
+       ============================================ */
+
+    /* --- Reset & Base --- */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 70px;
+    }
+
+    body {
+      font-family: 'Bitter', serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #F2F2F2;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Young Serif', serif;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    ul, ol {
+      padding-left: 1.25em;
+    }
+
+    /* --- Layout --- */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* --- Top Bar --- */
+    .top-bar {
+      background: #253551;
+      padding: 16px 0;
+    }
+
+    .top-bar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .top-bar-logo {
+      font-family: 'Young Serif', serif;
+      font-size: 22px;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .top-bar-link {
+      font-family: 'Bitter', serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #FFFFFF;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .top-bar-link:hover {
+      opacity: 1;
+    }
+
+    /* --- Hero --- */
+    .hero {
+      background: linear-gradient(135deg, #253551 0%, #1a2640 100%);
+      padding: 80px 0 60px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      opacity: 0.85;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .hero-url {
+      display: inline-block;
+      font-size: 14px;
+      color: #FFC905;
+      border-bottom: 1px solid rgba(255, 201, 5, 0.4);
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+
+    .hero-url:hover {
+      border-color: #FFC905;
+    }
+
+    .hero-underline {
+      width: 60px;
+      height: 4px;
+      background: #FFC905;
+      margin: 24px auto 0;
+      border-radius: 2px;
+    }
+
+    /* --- Sticky CTA Bar --- */
+    .sticky-cta {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #253551;
+      padding: 12px 0;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .sticky-cta .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sticky-cta-text {
+      font-family: 'Young Serif', serif;
+      font-size: 16px;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
+
+    /* --- Buttons --- */
+    .btn {
+      display: inline-block;
+      font-family: 'Bitter', serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 12px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-gold {
+      background: #FFC905;
+      color: #253551;
+    }
+
+    .btn-navy {
+      background: #253551;
+      color: #FFFFFF;
+    }
+
+    .btn-lg {
+      padding: 16px 48px;
+      font-size: 17px;
+    }
+
+    /* --- Video Section --- */
+    .video-section {
+      padding: 60px 0;
+      background: #FFFFFF;
+    }
+
+    .video-embed {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #1a1a1a;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      opacity: 0.6;
+      gap: 12px;
+    }
+
+    .video-placeholder svg {
+      width: 48px;
+      height: 48px;
+      fill: #FFFFFF;
+    }
+
+    .video-placeholder span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* --- Table of Contents --- */
+    .toc-section {
+      padding: 48px 0;
+      background: #F2F2F2;
+    }
+
+    .toc-section h2 {
+      font-size: 28px;
+      color: #253551;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .toc-list li {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .toc-list li:last-child {
+      border-bottom: none;
+    }
+
+    .toc-list a {
+      display: flex;
+      align-items: center;
+      padding: 14px 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: #253551;
+      transition: color 0.2s;
+    }
+
+    .toc-list a:hover {
+      color: #FFC905;
+    }
+
+    .toc-number {
+      font-family: 'Young Serif', serif;
+      font-size: 14px;
+      color: #FFC905;
+      margin-right: 16px;
+      min-width: 24px;
+    }
+
+    /* --- Audit Sections --- */
+    .audit-section {
+      padding: 64px 0;
+    }
+
+    .audit-section:nth-child(odd) {
+      background: #FFFFFF;
+    }
+
+    .audit-section:nth-child(even) {
+      background: #F2F2F2;
+    }
+
+    .section-number {
+      font-family: 'Young Serif', serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #FFC905;
+      margin-bottom: 8px;
+    }
+
+    .audit-section h2 {
+      font-size: 32px;
+      color: #253551;
+      margin-bottom: 24px;
+    }
+
+    .audit-section h3 {
+      font-size: 22px;
+      color: #253551;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .audit-section p {
+      margin-bottom: 16px;
+      color: #1a1a1a;
+    }
+
+    .audit-section ul, .audit-section ol {
+      margin-bottom: 16px;
+    }
+
+    .audit-section li {
+      margin-bottom: 6px;
+    }
+
+    /* --- Status Badges --- */
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+      flex-wrap: wrap;
+    }
+
+    .status-row:last-child {
+      border-bottom: none;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .status-active {
+      background: #e6f9e6;
+      color: #1a7a1a;
+    }
+
+    .status-warning {
+      background: #fff5e0;
+      color: #b37700;
+    }
+
+    .status-inactive {
+      background: #ffe6e6;
+      color: #cc0000;
+    }
+
+    /* --- Opportunity Cards --- */
+    .opp-card {
+      background: #FFFFFF;
+      border: 1px solid #e0e0e0;
+      border-left: 4px solid #FFC905;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 16px;
+      transition: box-shadow 0.2s;
+    }
+
+    .opp-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .opp-card h4 {
+      font-size: 18px;
+      color: #253551;
+      margin-bottom: 8px;
+    }
+
+    .opp-card p {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .opp-card ul {
+      margin-bottom: 0;
+    }
+
+    .opp-card li {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    /* --- Competitor Table --- */
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+
+    .comp-table thead {
+      background: #253551;
+      color: #FFFFFF;
+    }
+
+    .comp-table th {
+      font-family: 'Young Serif', serif;
+      font-weight: 400;
+      text-align: left;
+      padding: 14px 16px;
+    }
+
+    .comp-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .comp-table tbody tr:hover {
+      background: #f9f9f9;
+    }
+
+    /* --- SWOT Grid --- */
+    .swot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .swot-card {
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .swot-card h4 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .swot-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .swot-card li {
+      padding: 4px 0;
+      font-size: 14px;
+    }
+
+    .swot-card li::before {
+      content: "→ ";
+      font-weight: 700;
+    }
+
+    .swot-strengths {
+      background: #e6f9e6;
+      border: 1px solid #b3e6b3;
+    }
+
+    .swot-strengths h4 { color: #1a7a1a; }
+
+    .swot-weaknesses {
+      background: #ffe6e6;
+      border: 1px solid #f0b3b3;
+    }
+
+    .swot-weaknesses h4 { color: #cc0000; }
+
+    .swot-opportunities {
+      background: #e6f0ff;
+      border: 1px solid #b3cce6;
+    }
+
+    .swot-opportunities h4 { color: #0055aa; }
+
+    .swot-threats {
+      background: #fff5e0;
+      border: 1px solid #f0ddb3;
+    }
+
+    .swot-threats h4 { color: #b37700; }
+
+    /* --- Priority Cards --- */
+    .priority-card {
+      background: #FFFFFF;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 24px 24px 24px 80px;
+      margin-bottom: 16px;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+
+    .priority-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .priority-number {
+      position: absolute;
+      left: 24px;
+      top: 24px;
+      font-family: 'Young Serif', serif;
+      font-size: 28px;
+      color: #FFC905;
+      line-height: 1;
+    }
+
+    .priority-card h4 {
+      font-size: 18px;
+      color: #253551;
+      margin-bottom: 8px;
+    }
+
+    .priority-card ul {
+      margin-bottom: 0;
+    }
+
+    .priority-card li {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    /* --- Verdict Section --- */
+    .verdict-section {
+      background: linear-gradient(135deg, #253551 0%, #1a2640 100%);
+      padding: 80px 0;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .verdict-section h2 {
+      font-size: 36px;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+    }
+
+    .verdict-section .gold-line {
+      width: 60px;
+      height: 4px;
+      background: #FFC905;
+      margin: 0 auto 24px;
+      border-radius: 2px;
+    }
+
+    .verdict-section p {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto 32px;
+      opacity: 0.92;
+    }
+
+    /* --- CTA Section --- */
+    .cta-section {
+      background: #FFFFFF;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 32px;
+      color: #253551;
+      margin-bottom: 12px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      background: #253551;
+      padding: 40px 0;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .footer-logo {
+      font-family: 'Young Serif', serif;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: #FFFFFF;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      opacity: 0.5;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 640px) {
+      .hero {
+        padding: 60px 0 40px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .sticky-cta-text {
+        font-size: 14px;
+      }
+
+      .btn {
+        padding: 10px 24px;
+        font-size: 14px;
+      }
+
+      .btn-lg {
+        padding: 14px 36px;
+        font-size: 15px;
+      }
+
+      .audit-section {
+        padding: 48px 0;
+      }
+
+      .audit-section h2 {
+        font-size: 26px;
+      }
+
+      .audit-section h3 {
+        font-size: 19px;
+      }
+
+      .swot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .priority-card {
+        padding: 20px 20px 20px 64px;
+      }
+
+      .priority-number {
+        left: 16px;
+        font-size: 24px;
+      }
+
+      .comp-table {
+        font-size: 13px;
+      }
+
+      .comp-table th, .comp-table td {
+        padding: 10px 12px;
+      }
+
+      .verdict-section {
+        padding: 60px 0;
+      }
+
+      .verdict-section h2 {
+        font-size: 28px;
+      }
+
+      .verdict-section p {
+        font-size: 16px;
+      }
+
+      .cta-section {
+        padding: 60px 0;
+      }
+
+      .cta-section h2 {
+        font-size: 26px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <nav class="top-bar">
+    <div class="container">
+      <a href="https://getmrkt.com" class="top-bar-logo">MRKT</a>
+      <a href="https://getmrkt.com" class="top-bar-link">getmrkt.com</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <h1>Hairprint</h1>
+      <p class="hero-subtitle">Brand Audit &amp; Growth Roadmap</p>
+      <a href="https://www.myhairprint.com/" target="_blank" class="hero-url">www.myhairprint.com</a>
+      <div class="hero-underline"></div>
+    </div>
+  </header>
+
+  <!-- Sticky CTA Bar -->
+  <div class="sticky-cta">
+    <div class="container">
+      <span class="sticky-cta-text">MRKT</span>
+      <a href="mailto:jake@getmrkt.com?subject=Brand%20Audit%20Follow-up%20%E2%80%94%20Hairprint" class="btn btn-gold">Let's Chat</a>
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="container">
+      <div class="video-embed">
+        <div class="video-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <span>Loom video will appear here</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="toc-section">
+    <div class="container">
+      <h2>What's Inside</h2>
+      <ol class="toc-list">
+        <li><a href="#section-01"><span class="toc-number">01</span> Brand Snapshot &amp; Digital Presence</a></li>
+        <li><a href="#section-02"><span class="toc-number">02</span> Website &amp; Conversion Analysis</a></li>
+        <li><a href="#section-03"><span class="toc-number">03</span> Social Media Audit</a></li>
+        <li><a href="#section-04"><span class="toc-number">04</span> SEO &amp; Content Strategy</a></li>
+        <li><a href="#section-05"><span class="toc-number">05</span> Competitive Landscape</a></li>
+        <li><a href="#section-06"><span class="toc-number">06</span> SWOT Analysis</a></li>
+        <li><a href="#section-07"><span class="toc-number">07</span> Strategic Priorities</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Section 01: Brand Snapshot -->
+  <section class="audit-section" id="section-01">
+    <div class="container">
+      <div class="section-number">Section 01</div>
+      <h2>Brand Snapshot &amp; Digital Presence</h2>
+      <p>An overview of Hairprint's current digital footprint across key channels and platforms.</p>
+
+      <div class="status-row">
+        <span class="status-badge status-active">● Active</span>
+        <strong>Website</strong> — Main e-commerce site live at myhairprint.com
+      </div>
+      <div class="status-row">
+        <span class="status-badge status-active">● Active</span>
+        <strong>Instagram</strong> — Regular posting with engaged community
+      </div>
+      <div class="status-row">
+        <span class="status-badge status-active">● Active</span>
+        <strong>Facebook</strong> — Business page with active community group
+      </div>
+      <div class="status-row">
+        <span class="status-badge status-warning">● Partial</span>
+        <strong>Email Marketing</strong> — Basic flows set up, room for optimization
+      </div>
+      <div class="status-row">
+        <span class="status-badge status-inactive">● Missing</span>
+        <strong>TikTok</strong> — No presence on the platform
+      </div>
+      <div class="status-row">
+        <span class="status-badge status-inactive">● Missing</span>
+        <strong>YouTube</strong> — No dedicated channel or content strategy
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02: Website & Conversion -->
+  <section class="audit-section" id="section-02">
+    <div class="container">
+      <div class="section-number">Section 02</div>
+      <h2>Website &amp; Conversion Analysis</h2>
+      <p>Key observations and recommendations for improving the Hairprint website experience and conversion rate.</p>
+
+      <div class="opp-card">
+        <h4>Simplify the Homepage Hero</h4>
+        <p>The current homepage tries to communicate too many messages at once. A focused hero section with a single clear value proposition will improve engagement.</p>
+        <ul>
+          <li>Lead with the core benefit: restoring natural hair color without chemicals</li>
+          <li>Use a single compelling CTA above the fold</li>
+          <li>Move secondary messages below the fold</li>
+        </ul>
+      </div>
+
+      <div class="opp-card">
+        <h4>Improve Product Page Trust Signals</h4>
+        <p>Product pages would benefit from additional social proof and trust elements to increase conversion confidence.</p>
+        <ul>
+          <li>Add customer before/after photos with reviews</li>
+          <li>Display ingredient transparency prominently</li>
+          <li>Include a satisfaction guarantee badge</li>
+        </ul>
+      </div>
+
+      <div class="opp-card">
+        <h4>Streamline the Purchase Flow</h4>
+        <p>Reducing friction in the checkout process can meaningfully improve conversion rates.</p>
+        <ul>
+          <li>Offer a quiz-to-product recommendation flow</li>
+          <li>Add express checkout options (Shop Pay, Apple Pay)</li>
+          <li>Implement cart abandonment email sequences</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: Social Media -->
+  <section class="audit-section" id="section-03">
+    <div class="container">
+      <div class="section-number">Section 03</div>
+      <h2>Social Media Audit</h2>
+      <p>Analysis of Hairprint's social media presence and opportunities for growth.</p>
+
+      <h3>Instagram</h3>
+      <p>Hairprint has a solid Instagram presence with authentic content. To scale, the brand should focus on Reels and user-generated content that showcases real transformations.</p>
+      <ul>
+        <li>Increase Reels frequency to 3-4x per week</li>
+        <li>Launch a branded hashtag campaign for customer transformations</li>
+        <li>Partner with micro-influencers in the clean beauty space</li>
+      </ul>
+
+      <h3>Facebook</h3>
+      <p>The Facebook community group is a strong asset. Leveraging it for product feedback and launches can deepen customer loyalty.</p>
+      <ul>
+        <li>Host monthly live Q&amp;A sessions in the group</li>
+        <li>Create exclusive group-only promotions</li>
+        <li>Use group insights to inform content strategy</li>
+      </ul>
+
+      <h3>TikTok Opportunity</h3>
+      <p>Hairprint's visual transformation results are perfectly suited for TikTok's format. This represents the biggest untapped growth channel.</p>
+      <ul>
+        <li>Create a TikTok business account</li>
+        <li>Develop "process reveal" style content</li>
+        <li>Engage with clean beauty and gray hair communities</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 04: SEO & Content -->
+  <section class="audit-section" id="section-04">
+    <div class="container">
+      <div class="section-number">Section 04</div>
+      <h2>SEO &amp; Content Strategy</h2>
+      <p>Opportunities to improve organic search visibility and build authority through content marketing.</p>
+
+      <div class="opp-card">
+        <h4>Target Long-Tail Keywords</h4>
+        <p>There is significant search volume for natural hair color restoration queries that Hairprint can capture with targeted content.</p>
+        <ul>
+          <li>Create blog content around "natural gray hair reversal"</li>
+          <li>Build landing pages for specific use cases</li>
+          <li>Optimize existing product pages for search intent</li>
+        </ul>
+      </div>
+
+      <div class="opp-card">
+        <h4>Build an Educational Content Hub</h4>
+        <p>Positioning Hairprint as the authority on natural hair science will drive organic traffic and build trust.</p>
+        <ul>
+          <li>Publish weekly articles on hair health and science</li>
+          <li>Create a resource library with guides and FAQs</li>
+          <li>Develop video content explaining the science behind the product</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 05: Competitive Landscape -->
+  <section class="audit-section" id="section-05">
+    <div class="container">
+      <div class="section-number">Section 05</div>
+      <h2>Competitive Landscape</h2>
+      <p>A look at key competitors and how Hairprint can differentiate and strengthen its market position.</p>
+
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Competitor</th>
+            <th>Key Strength</th>
+            <th>Hairprint Advantage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Madison Reed</strong></td>
+            <td>Strong DTC brand with wide shade range</td>
+            <td>100% natural ingredients, no chemicals</td>
+          </tr>
+          <tr>
+            <td><strong>dpHUE</strong></td>
+            <td>Salon-quality at home, strong retail presence</td>
+            <td>Restores natural color vs. covering gray</td>
+          </tr>
+          <tr>
+            <td><strong>Overtone</strong></td>
+            <td>Vibrant colors, strong social media presence</td>
+            <td>Science-backed natural restoration</td>
+          </tr>
+          <tr>
+            <td><strong>Henna-based brands</strong></td>
+            <td>Natural positioning, loyal customer base</td>
+            <td>Clinically proven, no color coating</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Key Differentiator</h3>
+      <p>Hairprint stands alone in the market as the only product that truly restores natural hair color using the body's own melanin process. This is a powerful differentiator that should be front and center in all marketing communications.</p>
+    </div>
+  </section>
+
+  <!-- Section 06: SWOT Analysis -->
+  <section class="audit-section" id="section-06">
+    <div class="container">
+      <div class="section-number">Section 06</div>
+      <h2>SWOT Analysis</h2>
+      <p>A strategic overview of Hairprint's position in the market.</p>
+
+      <div class="swot-grid">
+        <div class="swot-card swot-strengths">
+          <h4>Strengths</h4>
+          <ul>
+            <li>Unique science-backed product with real results</li>
+            <li>Strong customer loyalty and repeat purchase rate</li>
+            <li>Clean ingredient story aligns with market trends</li>
+            <li>Passionate community of brand advocates</li>
+          </ul>
+        </div>
+        <div class="swot-card swot-weaknesses">
+          <h4>Weaknesses</h4>
+          <ul>
+            <li>Limited shade range compared to competitors</li>
+            <li>Complex application process may deter first-timers</li>
+            <li>Low brand awareness outside niche audience</li>
+            <li>Underutilized digital marketing channels</li>
+          </ul>
+        </div>
+        <div class="swot-card swot-opportunities">
+          <h4>Opportunities</h4>
+          <ul>
+            <li>Growing demand for clean beauty products</li>
+            <li>TikTok and short-form video as growth channels</li>
+            <li>Subscription model for recurring revenue</li>
+            <li>Strategic retail partnerships</li>
+          </ul>
+        </div>
+        <div class="swot-card swot-threats">
+          <h4>Threats</h4>
+          <ul>
+            <li>Larger brands entering the clean hair color space</li>
+            <li>Rising customer acquisition costs on paid channels</li>
+            <li>Misinformation about natural hair color restoration</li>
+            <li>Supply chain disruptions for specialty ingredients</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 07: Strategic Priorities -->
+  <section class="audit-section" id="section-07">
+    <div class="container">
+      <div class="section-number">Section 07</div>
+      <h2>Strategic Priorities</h2>
+      <p>The top recommendations for Hairprint's growth, ranked by potential impact.</p>
+
+      <div class="priority-card">
+        <span class="priority-number">01</span>
+        <h4>Launch TikTok &amp; Short-Form Video Strategy</h4>
+        <ul>
+          <li>Create a TikTok account and post 3-5x per week</li>
+          <li>Develop transformation reveal content series</li>
+          <li>Partner with 10-15 clean beauty micro-influencers</li>
+          <li>Repurpose top-performing content across Instagram Reels and YouTube Shorts</li>
+        </ul>
+      </div>
+
+      <div class="priority-card">
+        <span class="priority-number">02</span>
+        <h4>Optimize Website for Conversion</h4>
+        <ul>
+          <li>Redesign homepage hero with single value proposition</li>
+          <li>Add customer before/after gallery with reviews</li>
+          <li>Implement product recommendation quiz</li>
+          <li>Add express checkout options and optimize for mobile</li>
+        </ul>
+      </div>
+
+      <div class="priority-card">
+        <span class="priority-number">03</span>
+        <h4>Build an SEO-Driven Content Engine</h4>
+        <ul>
+          <li>Research and target 20+ long-tail keywords</li>
+          <li>Publish 2-3 blog posts per week on hair science topics</li>
+          <li>Create comprehensive guides for each hair type</li>
+          <li>Build backlinks through PR and expert features</li>
+        </ul>
+      </div>
+
+      <div class="priority-card">
+        <span class="priority-number">04</span>
+        <h4>Scale Email &amp; Retention Marketing</h4>
+        <ul>
+          <li>Build automated email flows (welcome, post-purchase, win-back)</li>
+          <li>Segment audience by purchase history and engagement</li>
+          <li>Launch a subscription/auto-replenish program</li>
+          <li>Create a loyalty or referral rewards program</li>
+        </ul>
+      </div>
+
+      <div class="priority-card">
+        <span class="priority-number">05</span>
+        <h4>Amplify Brand Awareness Through Partnerships</h4>
+        <ul>
+          <li>Identify and approach clean beauty retail partners</li>
+          <li>Collaborate with hair stylists and salon professionals</li>
+          <li>Pursue PR opportunities in health and beauty media</li>
+          <li>Explore co-branded campaigns with complementary brands</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Verdict -->
+  <section class="verdict-section">
+    <div class="container">
+      <h2>Final Verdict</h2>
+      <div class="gold-line"></div>
+      <p>Hairprint has something most brands would kill for: a genuinely unique product with real, science-backed results and a passionate customer base. The foundation is strong. The opportunity now is to amplify what's already working — bring the transformation stories to new audiences through short-form video, tighten the website experience to convert curious visitors into customers, and build the content engine that will drive sustainable organic growth. With the right strategy, Hairprint isn't just a product — it's a movement waiting to scale.</p>
+      <a href="mailto:jake@getmrkt.com?subject=Brand%20Audit%20Follow-up%20%E2%80%94%20Hairprint" class="btn btn-gold btn-lg">Let's Chat</a>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Grow?</h2>
+      <p>Let's turn these insights into action. Book a call with the MRKT team to discuss your custom growth strategy.</p>
+      <a href="mailto:jake@getmrkt.com?subject=Brand%20Audit%20Follow-up%20%E2%80%94%20Hairprint" class="btn btn-navy btn-lg">Let's Chat</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">MRKT</div>
+      <div class="footer-links">
+        <a href="https://getmrkt.com">Website</a>
+        <a href="mailto:jake@getmrkt.com">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 MRKT. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
