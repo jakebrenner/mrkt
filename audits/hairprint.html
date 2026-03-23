@@ -55,6 +55,12 @@
 
     /* --- Layout --- */
     .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .container-narrow {
       max-width: 900px;
       margin: 0 auto;
       padding: 0 24px;
@@ -188,57 +194,6 @@
     .btn-lg {
       padding: 16px 48px;
       font-size: 17px;
-    }
-
-    /* --- Video Section --- */
-    .video-section {
-      padding: 60px 0;
-      background: #FFFFFF;
-    }
-
-    .video-embed {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #1a1a1a;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    .video-embed iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .video-placeholder {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #FFFFFF;
-      opacity: 0.6;
-      gap: 12px;
-    }
-
-    .video-placeholder svg {
-      width: 48px;
-      height: 48px;
-      fill: #FFFFFF;
-    }
-
-    .video-placeholder span {
-      font-size: 14px;
-      font-weight: 500;
     }
 
     /* --- Table of Contents --- */
@@ -571,7 +526,7 @@
     .verdict-section p {
       font-size: 18px;
       line-height: 1.8;
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto 32px;
       opacity: 0.92;
     }
@@ -993,6 +948,367 @@
       color: #FFFFFF;
     }
 
+    /* --- Horizontal Bar Chart --- */
+    .bar-chart {
+      margin: 24px 0;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 12px;
+    }
+
+    .bar-label {
+      font-size: 14px;
+      font-weight: 600;
+      min-width: 120px;
+      text-align: right;
+      color: #253551;
+    }
+
+    .bar-track {
+      flex: 1;
+      background: #eee;
+      border-radius: 6px;
+      height: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #FFFFFF;
+      transition: width 0.6s ease;
+    }
+
+    .bar-fill.bar-red { background: linear-gradient(90deg, #cc0000, #e04040); }
+    .bar-fill.bar-blue { background: linear-gradient(90deg, #253551, #3a5a8c); }
+    .bar-fill.bar-teal { background: linear-gradient(90deg, #0055aa, #2980b9); }
+    .bar-fill.bar-gold { background: linear-gradient(90deg, #b37700, #d4950a); }
+
+    /* --- Donut Chart --- */
+    .donut-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      margin: 24px 0;
+    }
+
+    .donut-chart {
+      position: relative;
+      width: 160px;
+      height: 160px;
+    }
+
+    .donut-chart svg {
+      transform: rotate(-90deg);
+      width: 160px;
+      height: 160px;
+    }
+
+    .donut-chart .donut-bg {
+      fill: none;
+      stroke: #eee;
+      stroke-width: 12;
+    }
+
+    .donut-chart .donut-fill {
+      fill: none;
+      stroke-width: 12;
+      stroke-linecap: round;
+      transition: stroke-dasharray 0.8s ease;
+    }
+
+    .donut-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .donut-center .donut-value {
+      font-family: 'Young Serif', serif;
+      font-size: 36px;
+      color: #253551;
+      line-height: 1;
+    }
+
+    .donut-center .donut-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    .donut-legend {
+      font-size: 15px;
+      color: #1a1a1a;
+      max-width: 320px;
+    }
+
+    .donut-legend strong {
+      color: #253551;
+    }
+
+    /* --- Keyword Volume Bars --- */
+    .kw-bar-chart {
+      margin: 24px 0;
+    }
+
+    .kw-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 10px;
+    }
+
+    .kw-label {
+      font-size: 13px;
+      min-width: 200px;
+      text-align: right;
+      color: #555;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .kw-track {
+      flex: 1;
+      background: #eee;
+      border-radius: 4px;
+      height: 22px;
+      overflow: hidden;
+    }
+
+    .kw-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #FFC905, #e6b400);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #253551;
+    }
+
+    /* --- Grade Circles (visual scorecard) --- */
+    .grade-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .grade-circle-card {
+      text-align: center;
+      padding: 20px 12px;
+      background: #FFFFFF;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+    }
+
+    .grade-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      font-family: 'Young Serif', serif;
+      font-size: 28px;
+      color: #FFFFFF;
+    }
+
+    .grade-circle.gc-a { background: #1a7a1a; }
+    .grade-circle.gc-b { background: #0055aa; }
+    .grade-circle.gc-c { background: #b37700; }
+    .grade-circle.gc-d { background: #cc4400; }
+    .grade-circle.gc-f { background: #cc0000; }
+
+    .grade-circle-card .gc-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #253551;
+      margin-bottom: 2px;
+    }
+
+    .grade-circle-card .gc-note {
+      font-size: 11px;
+      color: #888;
+    }
+
+    /* --- Funnel Diagram --- */
+    .funnel {
+      margin: 32px auto;
+      max-width: 600px;
+    }
+
+    .funnel-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px 20px;
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 15px;
+      position: relative;
+    }
+
+    .funnel-stage:first-child {
+      border-radius: 8px 8px 0 0;
+    }
+
+    .funnel-stage:last-child {
+      border-radius: 0 0 8px 8px;
+    }
+
+    .funnel-stage .funnel-label {
+      font-family: 'Young Serif', serif;
+      font-size: 17px;
+      margin-right: 12px;
+      min-width: 140px;
+    }
+
+    .funnel-stage .funnel-status {
+      font-size: 13px;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    .funnel-awareness { background: #cc0000; }
+    .funnel-consideration { background: #cc4400; }
+    .funnel-conversion { background: #b37700; }
+    .funnel-retention { background: #1a7a1a; }
+
+    /* --- Calculator --- */
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 32px 0;
+    }
+
+    .calc-inputs, .calc-results {
+      background: #FFFFFF;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .calc-inputs h3, .calc-results h3 {
+      font-size: 20px;
+      color: #253551;
+      margin-bottom: 20px;
+    }
+
+    .calc-field {
+      margin-bottom: 20px;
+    }
+
+    .calc-field label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 14px;
+      font-weight: 600;
+      color: #253551;
+      margin-bottom: 8px;
+    }
+
+    .calc-field label span {
+      font-family: 'Young Serif', serif;
+      font-size: 18px;
+      color: #FFC905;
+    }
+
+    .calc-field input[type="range"] {
+      width: 100%;
+      -webkit-appearance: none;
+      height: 6px;
+      border-radius: 3px;
+      background: #e0e0e0;
+      outline: none;
+    }
+
+    .calc-field input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #253551;
+      cursor: pointer;
+      border: 3px solid #FFC905;
+    }
+
+    .calc-field input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #253551;
+      cursor: pointer;
+      border: 3px solid #FFC905;
+    }
+
+    .calc-result-card {
+      background: #F2F2F2;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .calc-result-card .calc-r-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .calc-result-card .calc-r-value {
+      font-family: 'Young Serif', serif;
+      font-size: 24px;
+      color: #253551;
+      transition: color 0.3s;
+    }
+
+    .calc-result-card.calc-highlight {
+      background: #253551;
+    }
+
+    .calc-result-card.calc-highlight .calc-r-label {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .calc-result-card.calc-highlight .calc-r-value {
+      color: #FFC905;
+    }
+
+    .calc-note {
+      font-size: 14px;
+      color: #777;
+      font-style: italic;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
     /* --- TOC Group Labels --- */
     .toc-group-label {
       font-family: 'Young Serif', serif;
@@ -1147,6 +1463,78 @@
       .mid-cta p {
         font-size: 18px;
       }
+
+      .grade-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .grade-circle {
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+      }
+
+      .grade-circle-card {
+        padding: 14px 8px;
+      }
+
+      .gc-name {
+        font-size: 12px;
+      }
+
+      .gc-note {
+        font-size: 10px;
+      }
+
+      .bar-label {
+        min-width: 90px;
+        font-size: 12px;
+      }
+
+      .donut-wrap {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .donut-legend {
+        max-width: 100%;
+      }
+
+      .kw-label {
+        min-width: 120px;
+        font-size: 11px;
+      }
+
+      .kw-fill {
+        font-size: 10px;
+        padding-right: 4px;
+      }
+
+      .funnel-stage {
+        flex-direction: column;
+        gap: 4px;
+        padding: 14px 16px;
+      }
+
+      .funnel-stage .funnel-label {
+        font-size: 15px;
+        min-width: auto;
+        margin-right: 0;
+      }
+
+      .funnel-stage .funnel-status {
+        font-size: 11px;
+      }
+
+      .calc-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .calc-result-card .calc-r-value {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -1177,18 +1565,6 @@
       <a href="mailto:jake@getmrkt.com?subject=Brand%20Audit%20Follow-up%20%E2%80%94%20Hairprint" class="btn btn-gold">Let's Chat</a>
     </div>
   </div>
-
-  <!-- Video Section -->
-  <section class="video-section">
-    <div class="container">
-      <div class="video-embed">
-        <div class="video-placeholder">
-          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <span>Loom video will appear here</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Executive Summary -->
   <section class="exec-summary" id="executive-summary">
@@ -1288,17 +1664,18 @@
       <ol class="toc-list">
         <li><a href="#executive-summary"><span class="toc-number">00</span> Executive Summary</a></li>
         <li><a href="#section-01"><span class="toc-number">01</span> Brand Snapshot &amp; Digital Presence</a></li>
-        <li><a href="#section-02"><span class="toc-number">02</span> Website &amp; Conversion Analysis</a></li>
-        <li><a href="#section-03"><span class="toc-number">03</span> Social Media &amp; Channel Audit</a></li>
-        <li><a href="#section-04"><span class="toc-number">04</span> SEO Deep Dive</a></li>
-        <li><a href="#section-05"><span class="toc-number">05</span> Content &amp; Organic Strategy</a></li>
-        <li><a href="#section-06"><span class="toc-number">06</span> Marketing Performance &amp; Insights</a></li>
+        <li><a href="#section-02"><span class="toc-number">02</span> Competitive Landscape</a></li>
+        <li><a href="#section-03"><span class="toc-number">03</span> SEO Deep Dive</a></li>
+        <li><a href="#section-04"><span class="toc-number">04</span> Website &amp; Conversion Analysis</a></li>
+        <li><a href="#section-05"><span class="toc-number">05</span> Social Media &amp; Channel Audit</a></li>
+        <li><a href="#section-06"><span class="toc-number">06</span> Content &amp; Organic Strategy</a></li>
       </ol>
       <p class="toc-group-label">The Strategy</p>
       <ol class="toc-list">
-        <li><a href="#section-07"><span class="toc-number">07</span> Competitive Landscape</a></li>
+        <li><a href="#section-07"><span class="toc-number">07</span> Marketing Performance &amp; Insights</a></li>
         <li><a href="#section-08"><span class="toc-number">08</span> SWOT Analysis</a></li>
         <li><a href="#section-09"><span class="toc-number">09</span> Strategic Priorities &amp; Action Plan</a></li>
+        <li><a href="#section-10"><span class="toc-number">10</span> Paid Media ROI Calculator</a></li>
       </ol>
     </div>
   </section>
@@ -1336,149 +1713,169 @@
       </div>
 
       <h3>Channel Performance Grades</h3>
-      <div class="grade-card">
-        <span class="grade-letter grade-c">C+</span>
-        <div class="grade-info">
-          <strong>Website &amp; E-Commerce</strong>
-          <span>Functional site but weak conversion structure, no quiz or guided flow</span>
+      <div class="grade-grid">
+        <div class="grade-circle-card">
+          <div class="grade-circle gc-c">C+</div>
+          <div class="gc-name">Website</div>
+          <div class="gc-note">Weak conversion flow</div>
         </div>
-      </div>
-      <div class="grade-card">
-        <span class="grade-letter grade-d">D+</span>
-        <div class="grade-info">
-          <strong>SEO &amp; Organic Search</strong>
-          <span>DA 21, minimal keyword rankings, thin content, weak backlink profile</span>
+        <div class="grade-circle-card">
+          <div class="grade-circle gc-d">D+</div>
+          <div class="gc-name">SEO</div>
+          <div class="gc-note">DA 21, thin content</div>
         </div>
-      </div>
-      <div class="grade-card">
-        <span class="grade-letter grade-c">C</span>
-        <div class="grade-info">
-          <strong>Content Marketing</strong>
-          <span>Some blog content exists but no strategic cadence or keyword targeting</span>
+        <div class="grade-circle-card">
+          <div class="grade-circle gc-c">C</div>
+          <div class="gc-name">Content</div>
+          <div class="gc-note">No keyword strategy</div>
         </div>
-      </div>
-      <div class="grade-card">
-        <span class="grade-letter grade-c">C+</span>
-        <div class="grade-info">
-          <strong>Instagram</strong>
-          <span>Active posting, engaged community, but low Reels adoption</span>
+        <div class="grade-circle-card">
+          <div class="grade-circle gc-c">C+</div>
+          <div class="gc-name">Instagram</div>
+          <div class="gc-note">Low Reels adoption</div>
         </div>
-      </div>
-      <div class="grade-card">
-        <span class="grade-letter grade-c">C</span>
-        <div class="grade-info">
-          <strong>Facebook</strong>
-          <span>Active community group is a strength, but page content is inconsistent</span>
+        <div class="grade-circle-card">
+          <div class="grade-circle gc-c">C</div>
+          <div class="gc-name">Facebook</div>
+          <div class="gc-note">Inconsistent page</div>
         </div>
-      </div>
-      <div class="grade-card">
-        <span class="grade-letter grade-d">D</span>
-        <div class="grade-info">
-          <strong>Email Marketing</strong>
-          <span>Basic flows only, no segmentation, limited automation</span>
+        <div class="grade-circle-card">
+          <div class="grade-circle gc-d">D</div>
+          <div class="gc-name">Email</div>
+          <div class="gc-note">No segmentation</div>
         </div>
-      </div>
-      <div class="grade-card">
-        <span class="grade-letter grade-f">F</span>
-        <div class="grade-info">
-          <strong>TikTok</strong>
-          <span>No presence — major missed opportunity for transformation content</span>
+        <div class="grade-circle-card">
+          <div class="grade-circle gc-f">F</div>
+          <div class="gc-name">TikTok</div>
+          <div class="gc-note">No presence</div>
         </div>
-      </div>
-      <div class="grade-card">
-        <span class="grade-letter grade-f">F</span>
-        <div class="grade-info">
-          <strong>YouTube</strong>
-          <span>No channel — missing long-form educational and tutorial content</span>
+        <div class="grade-circle-card">
+          <div class="grade-circle gc-f">F</div>
+          <div class="gc-name">YouTube</div>
+          <div class="gc-note">No channel</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 02: Website & Conversion -->
+  <!-- Section 02: Competitive Landscape -->
   <section class="audit-section" id="section-02">
     <div class="container">
       <div class="section-number">Section 02</div>
-      <h2>Website &amp; Conversion Analysis</h2>
-      <p>Key observations and recommendations for improving the Hairprint website experience and conversion rate.</p>
+      <h2>Competitive Landscape</h2>
+      <p>A look at key competitors and how Hairprint can differentiate and strengthen its market position. The gap between Hairprint and its competitors isn't product quality — it's marketing infrastructure.</p>
 
-      <div class="opp-card">
-        <h4>Simplify the Homepage Hero</h4>
-        <p>The current homepage tries to communicate too many messages at once. A focused hero section with a single clear value proposition will improve engagement.</p>
-        <ul>
-          <li>Lead with the core benefit: restoring natural hair color without chemicals</li>
-          <li>Use a single compelling CTA above the fold</li>
-          <li>Move secondary messages below the fold</li>
-        </ul>
+      <h3>Domain Authority Comparison</h3>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <span class="bar-label">Madison Reed</span>
+          <div class="bar-track"><div class="bar-fill bar-blue" style="width: 52%">52</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Overtone</span>
+          <div class="bar-track"><div class="bar-fill bar-teal" style="width: 45%">45</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">dpHUE</span>
+          <div class="bar-track"><div class="bar-fill bar-gold" style="width: 41%">41</div></div>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Hairprint</span>
+          <div class="bar-track"><div class="bar-fill bar-red" style="width: 21%">21</div></div>
+        </div>
       </div>
 
-      <div class="opp-card">
-        <h4>Improve Product Page Trust Signals</h4>
-        <p>Product pages would benefit from additional social proof and trust elements to increase conversion confidence.</p>
-        <ul>
-          <li>Add customer before/after photos with reviews</li>
-          <li>Display ingredient transparency prominently</li>
-          <li>Include a satisfaction guarantee badge</li>
-        </ul>
-      </div>
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Competitor</th>
+            <th>Key Strength</th>
+            <th>Hairprint Advantage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Madison Reed</strong></td>
+            <td>Strong DTC brand with wide shade range</td>
+            <td>100% natural ingredients, no chemicals</td>
+          </tr>
+          <tr>
+            <td><strong>dpHUE</strong></td>
+            <td>Salon-quality at home, strong retail presence</td>
+            <td>Restores natural color vs. covering gray</td>
+          </tr>
+          <tr>
+            <td><strong>Overtone</strong></td>
+            <td>Vibrant colors, strong social media presence</td>
+            <td>Science-backed natural restoration</td>
+          </tr>
+          <tr>
+            <td><strong>Henna-based brands</strong></td>
+            <td>Natural positioning, loyal customer base</td>
+            <td>Clinically proven, no color coating</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <div class="opp-card">
-        <h4>Streamline the Purchase Flow</h4>
-        <p>Reducing friction in the checkout process can meaningfully improve conversion rates.</p>
-        <ul>
-          <li>Offer a quiz-to-product recommendation flow</li>
-          <li>Add express checkout options (Shop Pay, Apple Pay)</li>
-          <li>Implement cart abandonment email sequences</li>
-        </ul>
-      </div>
+      <h3>Key Differentiator</h3>
+      <p>Hairprint stands alone in the market as the only product that truly restores natural hair color using the body's own melanin process. None of these competitors can replicate this. The task isn't building a better product — it's building the marketing engine to match it.</p>
+
+      <details class="audit-details">
+        <summary>Full SEO Competitor Comparison — 4 Competitors, 8 Metrics</summary>
+        <div class="details-content">
+          <div class="table-scroll">
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Hairprint</th>
+                  <th>Madison Reed</th>
+                  <th>dpHUE</th>
+                  <th>Overtone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Domain Authority</strong></td><td>21</td><td>52</td><td>41</td><td>45</td></tr>
+                <tr><td><strong>Referring Domains</strong></td><td>34</td><td>2,800+</td><td>890</td><td>1,200+</td></tr>
+                <tr><td><strong>Organic Keywords</strong></td><td>~50</td><td>12,000+</td><td>4,500+</td><td>6,200+</td></tr>
+                <tr><td><strong>Blog Posts</strong></td><td>~15</td><td>200+</td><td>80+</td><td>120+</td></tr>
+                <tr><td><strong>TikTok Followers</strong></td><td>None</td><td>85K</td><td>22K</td><td>310K</td></tr>
+                <tr><td><strong>Instagram Followers</strong></td><td>~8K</td><td>320K</td><td>180K</td><td>450K</td></tr>
+                <tr><td><strong>Product Schema</strong></td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                <tr><td><strong>Quiz/Guided Flow</strong></td><td>No</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
     </div>
   </section>
 
-  <!-- Section 03: Social Media -->
+  <!-- Section 03: SEO Deep Dive -->
   <section class="audit-section" id="section-03">
     <div class="container">
       <div class="section-number">Section 03</div>
-      <h2>Social Media &amp; Channel Audit</h2>
-      <p>Analysis of Hairprint's social media presence and opportunities for growth.</p>
-
-      <h3>Instagram</h3>
-      <p>Hairprint has a solid Instagram presence with authentic content. To scale, the brand should focus on Reels and user-generated content that showcases real transformations.</p>
-      <ul>
-        <li>Increase Reels frequency to 3-4x per week</li>
-        <li>Launch a branded hashtag campaign for customer transformations</li>
-        <li>Partner with micro-influencers in the clean beauty space</li>
-      </ul>
-
-      <h3>Facebook</h3>
-      <p>The Facebook community group is a strong asset. Leveraging it for product feedback and launches can deepen customer loyalty.</p>
-      <ul>
-        <li>Host monthly live Q&amp;A sessions in the group</li>
-        <li>Create exclusive group-only promotions</li>
-        <li>Use group insights to inform content strategy</li>
-      </ul>
-
-      <h3>TikTok Opportunity</h3>
-      <p>Hairprint's visual transformation results are perfectly suited for TikTok's format. This represents the biggest untapped growth channel.</p>
-      <ul>
-        <li>Create a TikTok business account</li>
-        <li>Develop "process reveal" style content</li>
-        <li>Engage with clean beauty and gray hair communities</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Section 04: SEO Deep Dive -->
-  <section class="audit-section" id="section-04">
-    <div class="container">
-      <div class="section-number">Section 04</div>
       <h2>SEO Deep Dive</h2>
       <p>A data-driven analysis of Hairprint's organic search performance, keyword opportunities, and technical SEO health.</p>
 
-      <div class="metric-bar">
-        <div class="metric-card metric-red">
-          <div class="metric-value">21</div>
-          <div class="metric-label">Domain Authority</div>
+      <div class="donut-wrap">
+        <div class="donut-chart">
+          <svg viewBox="0 0 120 120">
+            <circle class="donut-bg" cx="60" cy="60" r="50"/>
+            <circle class="donut-fill" cx="60" cy="60" r="50" stroke="#cc0000" stroke-dasharray="66 248"/>
+          </svg>
+          <div class="donut-center">
+            <div class="donut-value">21</div>
+            <div class="donut-label">out of 100</div>
+          </div>
         </div>
+        <div class="donut-legend">
+          <strong>Domain Authority: 21/100</strong><br>
+          Hairprint's DA is critically low. Competitors average 46. With only 34 referring domains and 166 backlinks, organic search is essentially a dormant channel — but one with massive upside.
+        </div>
+      </div>
+
+      <div class="metric-bar">
         <div class="metric-card metric-red">
           <div class="metric-value">34</div>
           <div class="metric-label">Referring Domains</div>
@@ -1491,10 +1888,27 @@
           <div class="metric-value">~50</div>
           <div class="metric-label">Ranking Keywords</div>
         </div>
+        <div class="metric-card metric-yellow">
+          <div class="metric-value">45</div>
+          <div class="metric-label">Mobile Speed</div>
+        </div>
       </div>
 
+      <h3>Keyword Opportunity — Search Volume</h3>
+      <div class="kw-bar-chart">
+        <div class="kw-row"><span class="kw-label">non toxic hair color</span><div class="kw-track"><div class="kw-fill" style="width:100%">3,200/mo</div></div></div>
+        <div class="kw-row"><span class="kw-label">how to reverse gray hair</span><div class="kw-track"><div class="kw-fill" style="width:75%">2,400/mo</div></div></div>
+        <div class="kw-row"><span class="kw-label">best natural hair dye</span><div class="kw-track"><div class="kw-fill" style="width:66%">2,100/mo</div></div></div>
+        <div class="kw-row"><span class="kw-label">chemical free hair dye</span><div class="kw-track"><div class="kw-fill" style="width:56%">1,800/mo</div></div></div>
+        <div class="kw-row"><span class="kw-label">natural gray hair reversal</span><div class="kw-track"><div class="kw-fill" style="width:50%">1,600/mo</div></div></div>
+        <div class="kw-row"><span class="kw-label">hair melanin supplements</span><div class="kw-track"><div class="kw-fill" style="width:44%">1,400/mo</div></div></div>
+        <div class="kw-row"><span class="kw-label">PPD free hair color</span><div class="kw-track"><div class="kw-fill" style="width:34%">1,100/mo</div></div></div>
+        <div class="kw-row"><span class="kw-label">melanin hair treatment</span><div class="kw-track"><div class="kw-fill" style="width:28%">900/mo</div></div></div>
+      </div>
+      <p style="font-size:14px;color:#777;margin-top:8px;">Combined uncaptured search volume across all 15 target keywords: <strong style="color:#253551;">19,600+ searches/month</strong></p>
+
       <details class="audit-details">
-        <summary>Keyword Opportunities — 15 High-Value Targets</summary>
+        <summary>Full Keyword Opportunities — 15 High-Value Targets</summary>
         <div class="details-content">
           <div class="table-scroll">
             <table class="comp-table">
@@ -1599,10 +2013,82 @@
     </div>
   </section>
 
-  <!-- Section 05: Content & Organic Strategy -->
+  <!-- Section 04: Website & Conversion -->
+  <section class="audit-section" id="section-04">
+    <div class="container">
+      <div class="section-number">Section 04</div>
+      <h2>Website &amp; Conversion Analysis</h2>
+      <p>Key observations and recommendations for improving the Hairprint website experience and conversion rate.</p>
+
+      <div class="opp-card">
+        <h4>Simplify the Homepage Hero</h4>
+        <p>The current homepage tries to communicate too many messages at once. A focused hero section with a single clear value proposition will improve engagement.</p>
+        <ul>
+          <li>Lead with the core benefit: restoring natural hair color without chemicals</li>
+          <li>Use a single compelling CTA above the fold</li>
+          <li>Move secondary messages below the fold</li>
+        </ul>
+      </div>
+
+      <div class="opp-card">
+        <h4>Improve Product Page Trust Signals</h4>
+        <p>Product pages would benefit from additional social proof and trust elements to increase conversion confidence.</p>
+        <ul>
+          <li>Add customer before/after photos with reviews</li>
+          <li>Display ingredient transparency prominently</li>
+          <li>Include a satisfaction guarantee badge</li>
+        </ul>
+      </div>
+
+      <div class="opp-card">
+        <h4>Streamline the Purchase Flow</h4>
+        <p>Reducing friction in the checkout process can meaningfully improve conversion rates.</p>
+        <ul>
+          <li>Offer a quiz-to-product recommendation flow</li>
+          <li>Add express checkout options (Shop Pay, Apple Pay)</li>
+          <li>Implement cart abandonment email sequences</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 05: Social Media -->
   <section class="audit-section" id="section-05">
     <div class="container">
       <div class="section-number">Section 05</div>
+      <h2>Social Media &amp; Channel Audit</h2>
+      <p>Analysis of Hairprint's social media presence and opportunities for growth.</p>
+
+      <h3>Instagram</h3>
+      <p>Hairprint has a solid Instagram presence with authentic content. To scale, the brand should focus on Reels and user-generated content that showcases real transformations.</p>
+      <ul>
+        <li>Increase Reels frequency to 3-4x per week</li>
+        <li>Launch a branded hashtag campaign for customer transformations</li>
+        <li>Partner with micro-influencers in the clean beauty space</li>
+      </ul>
+
+      <h3>Facebook</h3>
+      <p>The Facebook community group is a strong asset. Leveraging it for product feedback and launches can deepen customer loyalty.</p>
+      <ul>
+        <li>Host monthly live Q&amp;A sessions in the group</li>
+        <li>Create exclusive group-only promotions</li>
+        <li>Use group insights to inform content strategy</li>
+      </ul>
+
+      <h3>TikTok Opportunity</h3>
+      <p>Hairprint's visual transformation results are perfectly suited for TikTok's format. This represents the biggest untapped growth channel.</p>
+      <ul>
+        <li>Create a TikTok business account</li>
+        <li>Develop "process reveal" style content</li>
+        <li>Engage with clean beauty and gray hair communities</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 06: Content & Organic Strategy -->
+  <section class="audit-section" id="section-06">
+    <div class="container">
+      <div class="section-number">Section 06</div>
       <h2>Content &amp; Organic Strategy</h2>
       <p>Opportunities to build an organic growth engine through strategic content that captures search demand and establishes authority.</p>
 
@@ -1640,12 +2126,40 @@
     </div>
   </section>
 
-  <!-- Section 06: Marketing Performance -->
-  <section class="audit-section" id="section-06">
+  <!-- Mid-Page CTA -->
+  <div class="mid-cta">
     <div class="container">
-      <div class="section-number">Section 06</div>
+      <p>Seeing opportunities? Let's talk strategy.</p>
+      <a href="mailto:jake@getmrkt.com?subject=Brand%20Audit%20Follow-up%20%E2%80%94%20Hairprint" class="btn btn-gold">Let's Chat</a>
+    </div>
+  </div>
+
+  <!-- Section 07: Marketing Performance -->
+  <section class="audit-section" id="section-07">
+    <div class="container">
+      <div class="section-number">Section 07</div>
       <h2>Marketing Performance &amp; Insights</h2>
-      <p>A big-picture view of Hairprint's market position, tailwinds driving opportunity, and headwinds to navigate.</p>
+      <p>A big-picture view of Hairprint's marketing funnel, market position, and the tailwinds and headwinds shaping opportunity.</p>
+
+      <h3>Marketing Funnel Health</h3>
+      <div class="funnel">
+        <div class="funnel-stage funnel-awareness">
+          <span class="funnel-label">Awareness</span>
+          <span class="funnel-status">Weak — No TikTok/YouTube, DA 21, minimal organic visibility</span>
+        </div>
+        <div class="funnel-stage funnel-consideration">
+          <span class="funnel-label">Consideration</span>
+          <span class="funnel-status">Moderate — Science story is strong but hard to find</span>
+        </div>
+        <div class="funnel-stage funnel-conversion">
+          <span class="funnel-label">Conversion</span>
+          <span class="funnel-status">Needs Work — Complex purchase flow, no quiz, weak CTAs</span>
+        </div>
+        <div class="funnel-stage funnel-retention">
+          <span class="funnel-label">Retention</span>
+          <span class="funnel-status">Strong — High repeat rate, passionate community</span>
+        </div>
+      </div>
 
       <div class="exec-highlights">
         <div class="exec-highlight-box exec-working">
@@ -1689,88 +2203,6 @@
         <h4>Discount Dependency Needs Attention</h4>
         <p>Frequent promotional pricing risks training customers to wait for sales. Consider shifting toward value-add bundles, loyalty rewards, and subscription models instead of percentage-off promotions.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Mid-Page CTA -->
-  <div class="mid-cta">
-    <div class="container">
-      <p>Seeing opportunities? Let's talk strategy.</p>
-      <a href="mailto:jake@getmrkt.com?subject=Brand%20Audit%20Follow-up%20%E2%80%94%20Hairprint" class="btn btn-gold">Let's Chat</a>
-    </div>
-  </div>
-
-  <!-- Section 07: Competitive Landscape -->
-  <section class="audit-section" id="section-07">
-    <div class="container">
-      <div class="section-number">Section 07</div>
-      <h2>Competitive Landscape</h2>
-      <p>A look at key competitors and how Hairprint can differentiate and strengthen its market position.</p>
-
-      <table class="comp-table">
-        <thead>
-          <tr>
-            <th>Competitor</th>
-            <th>Key Strength</th>
-            <th>Hairprint Advantage</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Madison Reed</strong></td>
-            <td>Strong DTC brand with wide shade range</td>
-            <td>100% natural ingredients, no chemicals</td>
-          </tr>
-          <tr>
-            <td><strong>dpHUE</strong></td>
-            <td>Salon-quality at home, strong retail presence</td>
-            <td>Restores natural color vs. covering gray</td>
-          </tr>
-          <tr>
-            <td><strong>Overtone</strong></td>
-            <td>Vibrant colors, strong social media presence</td>
-            <td>Science-backed natural restoration</td>
-          </tr>
-          <tr>
-            <td><strong>Henna-based brands</strong></td>
-            <td>Natural positioning, loyal customer base</td>
-            <td>Clinically proven, no color coating</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Key Differentiator</h3>
-      <p>Hairprint stands alone in the market as the only product that truly restores natural hair color using the body's own melanin process. This is a powerful differentiator that should be front and center in all marketing communications.</p>
-
-      <details class="audit-details">
-        <summary>SEO Competitor Comparison — 4 Competitors Analyzed</summary>
-        <div class="details-content">
-          <div class="table-scroll">
-            <table class="comp-table">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th>Hairprint</th>
-                  <th>Madison Reed</th>
-                  <th>dpHUE</th>
-                  <th>Overtone</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td><strong>Domain Authority</strong></td><td>21</td><td>52</td><td>41</td><td>45</td></tr>
-                <tr><td><strong>Referring Domains</strong></td><td>34</td><td>2,800+</td><td>890</td><td>1,200+</td></tr>
-                <tr><td><strong>Organic Keywords</strong></td><td>~50</td><td>12,000+</td><td>4,500+</td><td>6,200+</td></tr>
-                <tr><td><strong>Blog Posts</strong></td><td>~15</td><td>200+</td><td>80+</td><td>120+</td></tr>
-                <tr><td><strong>TikTok Followers</strong></td><td>None</td><td>85K</td><td>22K</td><td>310K</td></tr>
-                <tr><td><strong>Instagram Followers</strong></td><td>~8K</td><td>320K</td><td>180K</td><td>450K</td></tr>
-                <tr><td><strong>Product Schema</strong></td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-                <tr><td><strong>Quiz/Guided Flow</strong></td><td>No</td><td>Yes</td><td>No</td><td>Yes</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>The gap is clear: Hairprint's SEO and content infrastructure lags far behind competitors. However, none of these competitors offer a melanin-restoration product — Hairprint's category advantage is unmatched. The task is building the marketing engine to match the product quality.</p>
-        </div>
-      </details>
     </div>
   </section>
 
@@ -1960,6 +2392,61 @@
     </div>
   </section>
 
+  <!-- Section 10: Paid Media ROI Calculator -->
+  <section class="audit-section" id="section-10">
+    <div class="container">
+      <div class="section-number">Section 10</div>
+      <h2>Paid Media ROI Calculator</h2>
+      <p>See what's possible. Adjust the inputs below to estimate revenue potential from paid advertising — then imagine what happens when you layer in SEO, better conversion rates, and segmented audiences.</p>
+
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <h3>Your Inputs</h3>
+          <div class="calc-field">
+            <label>Monthly Ad Spend <span id="calc-spend-val">$5,000</span></label>
+            <input type="range" id="calc-spend" min="1000" max="50000" step="500" value="5000">
+          </div>
+          <div class="calc-field">
+            <label>Cost Per Click <span id="calc-cpc-val">$1.50</span></label>
+            <input type="range" id="calc-cpc" min="50" max="500" step="10" value="150">
+          </div>
+          <div class="calc-field">
+            <label>Conversion Rate <span id="calc-cvr-val">2.5%</span></label>
+            <input type="range" id="calc-cvr" min="5" max="100" step="5" value="25">
+          </div>
+          <div class="calc-field">
+            <label>Average Order Value <span id="calc-aov-val">$45</span></label>
+            <input type="range" id="calc-aov" min="10" max="200" step="5" value="45">
+          </div>
+        </div>
+        <div class="calc-results">
+          <h3>Projected Results</h3>
+          <div class="calc-result-card">
+            <span class="calc-r-label">Monthly Clicks</span>
+            <span class="calc-r-value" id="calc-clicks">3,333</span>
+          </div>
+          <div class="calc-result-card">
+            <span class="calc-r-label">Monthly Conversions</span>
+            <span class="calc-r-value" id="calc-conversions">83</span>
+          </div>
+          <div class="calc-result-card">
+            <span class="calc-r-label">Monthly Revenue</span>
+            <span class="calc-r-value" id="calc-revenue">$3,750</span>
+          </div>
+          <div class="calc-result-card calc-highlight">
+            <span class="calc-r-label">ROAS</span>
+            <span class="calc-r-value" id="calc-roas">0.75x</span>
+          </div>
+          <div class="calc-result-card calc-highlight">
+            <span class="calc-r-label">Annual Revenue</span>
+            <span class="calc-r-value" id="calc-annual">$45,000</span>
+          </div>
+        </div>
+      </div>
+      <p class="calc-note">These projections improve dramatically with optimized landing pages, better conversion rates, and segmented audiences — exactly what MRKT helps you build. A 1% improvement in conversion rate can double your ROAS.</p>
+    </div>
+  </section>
+
   <!-- Final Verdict -->
   <section class="verdict-section">
     <div class="container">
@@ -1990,6 +2477,53 @@
       <p class="footer-copy">&copy; 2026 MRKT. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    (function() {
+      var spend = document.getElementById('calc-spend');
+      var cpc = document.getElementById('calc-cpc');
+      var cvr = document.getElementById('calc-cvr');
+      var aov = document.getElementById('calc-aov');
+
+      function fmt(n) { return n.toLocaleString('en-US'); }
+      function fmtD(n) { return '$' + fmt(Math.round(n)); }
+
+      function update() {
+        var s = +spend.value;
+        var c = +cpc.value / 100;
+        var r = +cvr.value / 10;
+        var a = +aov.value;
+
+        document.getElementById('calc-spend-val').textContent = fmtD(s);
+        document.getElementById('calc-cpc-val').textContent = '$' + c.toFixed(2);
+        document.getElementById('calc-cvr-val').textContent = r.toFixed(1) + '%';
+        document.getElementById('calc-aov-val').textContent = fmtD(a);
+
+        var clicks = Math.round(s / c);
+        var conversions = Math.round(clicks * (r / 100));
+        var revenue = conversions * a;
+        var roas = s > 0 ? revenue / s : 0;
+        var annual = revenue * 12;
+
+        document.getElementById('calc-clicks').textContent = fmt(clicks);
+        document.getElementById('calc-conversions').textContent = fmt(conversions);
+        document.getElementById('calc-revenue').textContent = fmtD(revenue);
+        document.getElementById('calc-roas').textContent = roas.toFixed(2) + 'x';
+        document.getElementById('calc-annual').textContent = fmtD(annual);
+
+        var roasEl = document.getElementById('calc-roas');
+        if (roas >= 3) roasEl.style.color = '#1a7a1a';
+        else if (roas >= 1) roasEl.style.color = '#FFC905';
+        else roasEl.style.color = '#cc0000';
+      }
+
+      spend.addEventListener('input', update);
+      cpc.addEventListener('input', update);
+      cvr.addEventListener('input', update);
+      aov.addEventListener('input', update);
+      update();
+    })();
+  </script>
 
 </body>
 </html>
