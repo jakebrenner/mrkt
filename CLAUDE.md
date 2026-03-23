@@ -61,20 +61,56 @@ Convert brand name to lowercase kebab-case for the filename:
 Every audit page MUST include these elements in this order:
 
 ```
-1. Top Bar         — Navy bar with "MRKT" logo linking to getmrkt.com
-2. Hero            — Dark gradient, brand name as h1, subtitle, website link
-3. Sticky CTA Bar  — Persistent navy bar with "Let's Chat" mailto button
-4. Video Section   — Loom iframe embed (or placeholder if no URL)
-5. Table of Contents — Numbered anchor links to each section
-6. Audit Sections  — Numbered sections with the actual audit content
-7. Final Verdict   — Dark gradient section with summary + CTA
-8. CTA Section     — White section with final "Let's Chat" CTA
-9. Footer          — Navy footer with MRKT logo + links
+1. Top Bar           — Navy bar with "MRKT" logo linking to getmrkt.com
+2. Hero              — Dark gradient, brand name as h1, subtitle, website link
+3. Sticky CTA Bar    — Persistent navy bar with "Let's Chat" mailto button
+4. Video Section     — Loom iframe embed (or placeholder if no URL)
+5. Executive Summary — Overview with highlights + key opportunities
+6. Table of Contents — Numbered anchor links to each section
+7. Audit Sections    — Numbered sections with the actual audit content
+8. Final Verdict    — Dark gradient section with summary + CTA
+9. CTA Section      — White section with final "Let's Chat" CTA
+10. Footer          — Navy footer with MRKT logo + links
 ```
 
 ### 4. Section Component Reference
 
 Use these components to structure audit content:
+
+**Executive Summary** — overview section with highlights and opportunities:
+```html
+<section class="exec-summary" id="executive-summary">
+  <div class="container">
+    <h2>Executive Summary</h2>
+    <div class="gold-line"></div>
+    <p class="exec-intro">Overview paragraph...</p>
+
+    <div class="exec-highlights">
+      <div class="exec-highlight-box exec-working">
+        <h3>What's Working Well</h3>
+        <ul><li>Strength item</li></ul>
+      </div>
+      <div class="exec-highlight-box exec-opportunity-box">
+        <h3>Where There's Opportunity</h3>
+        <ul><li>Opportunity item</li></ul>
+      </div>
+    </div>
+
+    <div class="exec-opps">
+      <div class="exec-opp-item">
+        <span class="exec-opp-num">1</span>
+        <h4>Opportunity Title</h4>
+        <p>Description</p>
+      </div>
+    </div>
+
+    <div class="exec-callout">
+      <h3>Biggest Opportunity</h3>
+      <p>Summary callout text</p>
+    </div>
+  </div>
+</section>
+```
 
 **Status Badges** — for platform/channel presence checks:
 ```html

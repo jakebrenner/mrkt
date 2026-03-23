@@ -637,6 +637,151 @@
       opacity: 0.5;
     }
 
+    /* --- Executive Summary --- */
+    .exec-summary {
+      padding: 64px 0;
+      background: #FFFFFF;
+    }
+
+    .exec-summary h2 {
+      font-size: 32px;
+      color: #253551;
+      margin-bottom: 8px;
+    }
+
+    .exec-summary .gold-line {
+      width: 60px;
+      height: 4px;
+      background: #FFC905;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    .exec-summary .exec-intro {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #1a1a1a;
+      margin-bottom: 32px;
+    }
+
+    .exec-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .exec-highlight-box {
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .exec-highlight-box h3 {
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    .exec-highlight-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .exec-highlight-box li {
+      padding: 5px 0;
+      font-size: 15px;
+    }
+
+    .exec-highlight-box li::before {
+      content: "✓ ";
+      font-weight: 700;
+    }
+
+    .exec-working {
+      background: #e6f9e6;
+      border: 1px solid #b3e6b3;
+    }
+
+    .exec-working h3 { color: #1a7a1a; }
+
+    .exec-working li::before { color: #1a7a1a; }
+
+    .exec-opportunity-box {
+      background: #fff9e6;
+      border: 1px solid #f0ddb3;
+    }
+
+    .exec-opportunity-box h3 { color: #b37700; }
+
+    .exec-opportunity-box li::before {
+      content: "→ ";
+      color: #b37700;
+    }
+
+    .exec-opps {
+      margin-bottom: 32px;
+    }
+
+    .exec-opp-item {
+      background: #F2F2F2;
+      border-radius: 8px;
+      padding: 20px 20px 20px 60px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .exec-opp-num {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      font-family: 'Young Serif', serif;
+      font-size: 22px;
+      color: #FFC905;
+      line-height: 1;
+    }
+
+    .exec-opp-item h4 {
+      font-size: 17px;
+      color: #253551;
+      margin-bottom: 6px;
+    }
+
+    .exec-opp-item p {
+      font-size: 15px;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .exec-opp-item ul {
+      margin: 0;
+      padding-left: 1.25em;
+    }
+
+    .exec-opp-item li {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .exec-callout {
+      background: linear-gradient(135deg, #253551 0%, #1a2640 100%);
+      border-radius: 8px;
+      padding: 28px 32px;
+      color: #FFFFFF;
+    }
+
+    .exec-callout h3 {
+      font-size: 20px;
+      color: #FFC905;
+      margin-bottom: 10px;
+    }
+
+    .exec-callout p {
+      font-size: 16px;
+      line-height: 1.7;
+      opacity: 0.92;
+      margin: 0;
+    }
+
     /* --- Responsive --- */
     @media (max-width: 640px) {
       .hero {
@@ -722,6 +867,23 @@
         flex-direction: column;
         gap: 12px;
       }
+
+      .exec-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .exec-opp-item {
+        padding: 16px 16px 16px 50px;
+      }
+
+      .exec-opp-num {
+        left: 16px;
+        font-size: 18px;
+      }
+
+      .exec-callout {
+        padding: 24px;
+      }
     }
   </style>
 </head>
@@ -765,11 +927,83 @@
     </div>
   </section>
 
+  <!-- Executive Summary -->
+  <section class="exec-summary" id="executive-summary">
+    <div class="container">
+      <h2>Executive Summary</h2>
+      <div class="gold-line"></div>
+      <p class="exec-intro">I spent some time looking through the site and brand positioning for MyHairprint, and overall, it's a really interesting product with a strong niche. The biggest strength is the science-backed differentiation. Most hair color brands are just selling dye, while Hairprint is selling a completely different approach to restoring natural hair color. That's a powerful story. Where there seems to be opportunity is in how that story gets translated into marketing and conversion.</p>
+
+      <div class="exec-highlights">
+        <div class="exec-highlight-box exec-working">
+          <h3>What's Working Well</h3>
+          <ul>
+            <li>Very unique product concept</li>
+            <li>Strong scientific credibility</li>
+            <li>Appeals to clean beauty / non-toxic audience</li>
+            <li>Premium positioning potential</li>
+          </ul>
+        </div>
+        <div class="exec-highlight-box exec-opportunity-box">
+          <h3>Where There's Opportunity</h3>
+          <ul>
+            <li>Simplifying the message for new visitors</li>
+            <li>Guided purchase experience</li>
+            <li>Stronger conversion structure</li>
+            <li>Paid media segmentation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exec-opps">
+        <div class="exec-opp-item">
+          <span class="exec-opp-num">1</span>
+          <h4>Simplifying the Message for New Visitors</h4>
+          <p>The science is impressive, but for a first-time customer it can feel complicated. Competitors tend to make the buying process feel simpler and lower commitment.</p>
+        </div>
+        <div class="exec-opp-item">
+          <span class="exec-opp-num">2</span>
+          <h4>Guided Purchase Experience</h4>
+          <p>Brands like Madison Reed do a great job using quizzes to help customers figure out what product is right for them. Something like a "Find Your Hairprint Plan" tool could make the experience feel much easier.</p>
+        </div>
+        <div class="exec-opp-item">
+          <span class="exec-opp-num">3</span>
+          <h4>Stronger Conversion Structure</h4>
+          <p>Small CRO improvements could help a lot:</p>
+          <ul>
+            <li>Clearer above-the-fold value proposition</li>
+            <li>Stronger product bundles or starter kits</li>
+            <li>More visible guarantees and social proof</li>
+            <li>A clearer path to repeat purchases</li>
+          </ul>
+        </div>
+        <div class="exec-opp-item">
+          <span class="exec-opp-num">4</span>
+          <h4>Paid Media Segmentation</h4>
+          <p>This product lends itself really well to targeted messaging like:</p>
+          <ul>
+            <li>First signs of gray</li>
+            <li>Avoiding toxic dyes</li>
+            <li>Men vs women</li>
+            <li>Natural aging support</li>
+          </ul>
+          <p>Those segmented angles can dramatically improve ad performance.</p>
+        </div>
+      </div>
+
+      <div class="exec-callout">
+        <h3>Biggest Opportunity</h3>
+        <p>Hairprint has a strong product and story. The opportunity is really about turning that science into a simpler, more guided buying experience that converts better and scales through paid media.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Table of Contents -->
   <section class="toc-section">
     <div class="container">
       <h2>What's Inside</h2>
       <ol class="toc-list">
+        <li><a href="#executive-summary"><span class="toc-number">00</span> Executive Summary</a></li>
         <li><a href="#section-01"><span class="toc-number">01</span> Brand Snapshot &amp; Digital Presence</a></li>
         <li><a href="#section-02"><span class="toc-number">02</span> Website &amp; Conversion Analysis</a></li>
         <li><a href="#section-03"><span class="toc-number">03</span> Social Media Audit</a></li>
