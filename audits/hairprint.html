@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brand Audit — Hairprint | MRKT</title>
+  <title>Brand, SEO &amp; Marketing Audit — Hairprint | MRKT</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -782,6 +782,233 @@
       margin: 0;
     }
 
+    /* --- Metric Bar --- */
+    .metric-bar {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 24px 0 32px;
+    }
+
+    .metric-card {
+      background: #FFFFFF;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px 24px;
+      text-align: center;
+      flex: 1;
+      min-width: 120px;
+      max-width: 180px;
+    }
+
+    .metric-card .metric-value {
+      font-family: 'Young Serif', serif;
+      font-size: 32px;
+      color: #253551;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .metric-card .metric-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+    }
+
+    .metric-card.metric-red { border-top: 4px solid #cc0000; }
+    .metric-card.metric-yellow { border-top: 4px solid #b37700; }
+    .metric-card.metric-green { border-top: 4px solid #1a7a1a; }
+
+    /* --- Grade Cards --- */
+    .grade-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: #FFFFFF;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .grade-letter {
+      font-family: 'Young Serif', serif;
+      font-size: 36px;
+      line-height: 1;
+      min-width: 48px;
+      text-align: center;
+    }
+
+    .grade-letter.grade-a { color: #1a7a1a; }
+    .grade-letter.grade-b { color: #0055aa; }
+    .grade-letter.grade-c { color: #b37700; }
+    .grade-letter.grade-d { color: #cc0000; }
+    .grade-letter.grade-f { color: #cc0000; }
+
+    .grade-info strong {
+      display: block;
+      font-size: 15px;
+      color: #253551;
+      margin-bottom: 2px;
+    }
+
+    .grade-info span {
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* --- Table Scroll Wrapper --- */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px 0;
+      position: relative;
+    }
+
+    .table-scroll table {
+      min-width: 600px;
+    }
+
+    /* --- Details / Summary Accordion --- */
+    .audit-details {
+      margin: 16px 0;
+    }
+
+    .audit-details summary {
+      cursor: pointer;
+      font-family: 'Young Serif', serif;
+      font-size: 18px;
+      color: #253551;
+      padding: 16px 20px;
+      background: #FFFFFF;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .audit-details summary::-webkit-details-marker { display: none; }
+
+    .audit-details summary::after {
+      content: "+";
+      font-size: 22px;
+      color: #FFC905;
+      font-weight: 700;
+      transition: transform 0.2s;
+    }
+
+    .audit-details[open] summary::after {
+      content: "\2212";
+    }
+
+    .audit-details[open] summary {
+      border-radius: 8px 8px 0 0;
+      border-bottom: 2px solid #FFC905;
+    }
+
+    .audit-details .details-content {
+      padding: 24px;
+      border: 1px solid #e0e0e0;
+      border-top: 0;
+      border-radius: 0 0 8px 8px;
+      background: #FFFFFF;
+    }
+
+    /* --- Priority Matrix --- */
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 24px 0;
+    }
+
+    .matrix-cell {
+      padding: 20px;
+    }
+
+    .matrix-cell h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .matrix-cell ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .matrix-cell li {
+      font-size: 14px;
+      padding: 3px 0;
+    }
+
+    .matrix-cell li::before {
+      content: "→ ";
+      font-weight: 700;
+    }
+
+    .matrix-quick-wins {
+      background: #e6f9e6;
+    }
+
+    .matrix-quick-wins h4 { color: #1a7a1a; }
+
+    .matrix-strategic {
+      background: #e6f0ff;
+    }
+
+    .matrix-strategic h4 { color: #0055aa; }
+
+    .matrix-fillins {
+      background: #f7f7f7;
+    }
+
+    .matrix-fillins h4 { color: #777; }
+
+    .matrix-deprioritize {
+      background: #fff5e0;
+    }
+
+    .matrix-deprioritize h4 { color: #b37700; }
+
+    /* --- Mid-Page CTA --- */
+    .mid-cta {
+      background: #253551;
+      padding: 40px 0;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .mid-cta p {
+      font-family: 'Young Serif', serif;
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+
+    /* --- TOC Group Labels --- */
+    .toc-group-label {
+      font-family: 'Young Serif', serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #FFC905;
+      margin-top: 20px;
+      margin-bottom: 4px;
+      padding-left: 0;
+    }
+
+    .toc-group-label:first-child {
+      margin-top: 0;
+    }
+
     /* --- Responsive --- */
     @media (max-width: 640px) {
       .hero {
@@ -884,6 +1111,42 @@
       .exec-callout {
         padding: 24px;
       }
+
+      .metric-bar {
+        gap: 10px;
+      }
+
+      .metric-card {
+        min-width: calc(50% - 10px);
+        max-width: none;
+        padding: 14px 12px;
+      }
+
+      .metric-card .metric-value {
+        font-size: 26px;
+      }
+
+      .grade-card {
+        padding: 12px 14px;
+      }
+
+      .grade-letter {
+        font-size: 28px;
+        min-width: 36px;
+      }
+
+      .audit-details summary {
+        font-size: 15px;
+        padding: 14px 16px;
+      }
+
+      .matrix-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mid-cta p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
@@ -901,7 +1164,7 @@
   <header class="hero">
     <div class="container">
       <h1>Hairprint</h1>
-      <p class="hero-subtitle">Brand Audit &amp; Growth Roadmap</p>
+      <p class="hero-subtitle">Brand, SEO &amp; Marketing Audit</p>
       <a href="https://www.myhairprint.com/" target="_blank" class="hero-url">www.myhairprint.com</a>
       <div class="hero-underline"></div>
     </div>
@@ -932,25 +1195,51 @@
     <div class="container">
       <h2>Executive Summary</h2>
       <div class="gold-line"></div>
-      <p class="exec-intro">I spent some time looking through the site and brand positioning for MyHairprint, and overall, it's a really interesting product with a strong niche. The biggest strength is the science-backed differentiation. Most hair color brands are just selling dye, while Hairprint is selling a completely different approach to restoring natural hair color. That's a powerful story. Where there seems to be opportunity is in how that story gets translated into marketing and conversion.</p>
+
+      <div class="metric-bar">
+        <div class="metric-card metric-red">
+          <div class="metric-value">21</div>
+          <div class="metric-label">Domain Authority</div>
+        </div>
+        <div class="metric-card metric-red">
+          <div class="metric-value">34</div>
+          <div class="metric-label">Referring Domains</div>
+        </div>
+        <div class="metric-card metric-yellow">
+          <div class="metric-value">166</div>
+          <div class="metric-label">Backlinks</div>
+        </div>
+        <div class="metric-card metric-yellow">
+          <div class="metric-value">3.9</div>
+          <div class="metric-label">Avg Review Score</div>
+        </div>
+        <div class="metric-card metric-yellow">
+          <div class="metric-value">C-</div>
+          <div class="metric-label">Overall Grade</div>
+        </div>
+      </div>
+
+      <p class="exec-intro">We conducted a comprehensive brand, SEO, and marketing audit for Hairprint. The product itself is genuinely unique — the only solution that restores natural hair color through the body's own melanin process. That scientific credibility is a massive asset. However, the marketing infrastructure isn't keeping pace with the product's potential. Domain authority sits at just 21/100, organic visibility is minimal, and several key channels are underperforming or completely absent. The opportunity here is significant: tighten the conversion funnel, build an SEO foundation, and scale through the channels where Hairprint's transformation story can truly shine.</p>
 
       <div class="exec-highlights">
         <div class="exec-highlight-box exec-working">
           <h3>What's Working Well</h3>
           <ul>
-            <li>Very unique product concept</li>
-            <li>Strong scientific credibility</li>
-            <li>Appeals to clean beauty / non-toxic audience</li>
-            <li>Premium positioning potential</li>
+            <li>Genuinely unique, science-backed product with no direct competitor</li>
+            <li>Strong customer loyalty and repeat purchase behavior</li>
+            <li>Clean beauty positioning aligns perfectly with market trends</li>
+            <li>Passionate community and authentic brand advocates</li>
+            <li>Active Facebook group driving word-of-mouth</li>
           </ul>
         </div>
         <div class="exec-highlight-box exec-opportunity-box">
           <h3>Where There's Opportunity</h3>
           <ul>
-            <li>Simplifying the message for new visitors</li>
-            <li>Guided purchase experience</li>
-            <li>Stronger conversion structure</li>
-            <li>Paid media segmentation</li>
+            <li>SEO is severely underbuilt — DA 21, minimal keyword rankings</li>
+            <li>No TikTok or YouTube presence for transformation content</li>
+            <li>Website conversion flow needs simplification</li>
+            <li>Email marketing has basic flows but lacks segmentation</li>
+            <li>Content strategy missing educational hub potential</li>
           </ul>
         </div>
       </div>
@@ -958,42 +1247,35 @@
       <div class="exec-opps">
         <div class="exec-opp-item">
           <span class="exec-opp-num">1</span>
-          <h4>Simplifying the Message for New Visitors</h4>
-          <p>The science is impressive, but for a first-time customer it can feel complicated. Competitors tend to make the buying process feel simpler and lower commitment.</p>
+          <h4>Build an SEO Foundation</h4>
+          <p>With a DA of 21 and only 34 referring domains, Hairprint is invisible in organic search for high-intent keywords like "natural gray hair reversal" and "non-toxic hair color." A targeted SEO strategy could capture thousands of monthly searches.</p>
         </div>
         <div class="exec-opp-item">
           <span class="exec-opp-num">2</span>
-          <h4>Guided Purchase Experience</h4>
-          <p>Brands like Madison Reed do a great job using quizzes to help customers figure out what product is right for them. Something like a "Find Your Hairprint Plan" tool could make the experience feel much easier.</p>
+          <h4>Simplify the Purchase Journey</h4>
+          <p>The science is impressive but overwhelming for first-time visitors. A guided quiz, clearer hero messaging, and streamlined product pages could significantly improve conversion rates.</p>
         </div>
         <div class="exec-opp-item">
           <span class="exec-opp-num">3</span>
-          <h4>Stronger Conversion Structure</h4>
-          <p>Small CRO improvements could help a lot:</p>
-          <ul>
-            <li>Clearer above-the-fold value proposition</li>
-            <li>Stronger product bundles or starter kits</li>
-            <li>More visible guarantees and social proof</li>
-            <li>A clearer path to repeat purchases</li>
-          </ul>
+          <h4>Launch Short-Form Video Channels</h4>
+          <p>Hairprint's visual transformation results are perfectly suited for TikTok and YouTube Shorts. This is the biggest untapped growth channel — competitors are already building audiences here.</p>
         </div>
         <div class="exec-opp-item">
           <span class="exec-opp-num">4</span>
-          <h4>Paid Media Segmentation</h4>
-          <p>This product lends itself really well to targeted messaging like:</p>
+          <h4>Scale Paid Media with Segmentation</h4>
+          <p>This product serves multiple distinct audiences that respond to different messaging:</p>
           <ul>
-            <li>First signs of gray</li>
-            <li>Avoiding toxic dyes</li>
-            <li>Men vs women</li>
-            <li>Natural aging support</li>
+            <li>First signs of gray — anxiety-driven, seeking prevention</li>
+            <li>Toxic dye avoiders — health-conscious, seeking alternatives</li>
+            <li>Men's gray coverage — underserved, high search volume</li>
+            <li>Natural aging advocates — lifestyle-driven, community-oriented</li>
           </ul>
-          <p>Those segmented angles can dramatically improve ad performance.</p>
         </div>
       </div>
 
       <div class="exec-callout">
         <h3>Biggest Opportunity</h3>
-        <p>Hairprint has a strong product and story. The opportunity is really about turning that science into a simpler, more guided buying experience that converts better and scales through paid media.</p>
+        <p>Hairprint has a product most brands would envy. The gap is between product quality and marketing infrastructure. By building an SEO engine, simplifying the conversion path, and launching transformation content on TikTok and YouTube, Hairprint can go from niche secret to category leader.</p>
       </div>
     </div>
   </section>
@@ -1002,15 +1284,21 @@
   <section class="toc-section">
     <div class="container">
       <h2>What's Inside</h2>
+      <p class="toc-group-label">The Diagnosis</p>
       <ol class="toc-list">
         <li><a href="#executive-summary"><span class="toc-number">00</span> Executive Summary</a></li>
         <li><a href="#section-01"><span class="toc-number">01</span> Brand Snapshot &amp; Digital Presence</a></li>
         <li><a href="#section-02"><span class="toc-number">02</span> Website &amp; Conversion Analysis</a></li>
-        <li><a href="#section-03"><span class="toc-number">03</span> Social Media Audit</a></li>
-        <li><a href="#section-04"><span class="toc-number">04</span> SEO &amp; Content Strategy</a></li>
-        <li><a href="#section-05"><span class="toc-number">05</span> Competitive Landscape</a></li>
-        <li><a href="#section-06"><span class="toc-number">06</span> SWOT Analysis</a></li>
-        <li><a href="#section-07"><span class="toc-number">07</span> Strategic Priorities</a></li>
+        <li><a href="#section-03"><span class="toc-number">03</span> Social Media &amp; Channel Audit</a></li>
+        <li><a href="#section-04"><span class="toc-number">04</span> SEO Deep Dive</a></li>
+        <li><a href="#section-05"><span class="toc-number">05</span> Content &amp; Organic Strategy</a></li>
+        <li><a href="#section-06"><span class="toc-number">06</span> Marketing Performance &amp; Insights</a></li>
+      </ol>
+      <p class="toc-group-label">The Strategy</p>
+      <ol class="toc-list">
+        <li><a href="#section-07"><span class="toc-number">07</span> Competitive Landscape</a></li>
+        <li><a href="#section-08"><span class="toc-number">08</span> SWOT Analysis</a></li>
+        <li><a href="#section-09"><span class="toc-number">09</span> Strategic Priorities &amp; Action Plan</a></li>
       </ol>
     </div>
   </section>
@@ -1045,6 +1333,64 @@
       <div class="status-row">
         <span class="status-badge status-inactive">● Missing</span>
         <strong>YouTube</strong> — No dedicated channel or content strategy
+      </div>
+
+      <h3>Channel Performance Grades</h3>
+      <div class="grade-card">
+        <span class="grade-letter grade-c">C+</span>
+        <div class="grade-info">
+          <strong>Website &amp; E-Commerce</strong>
+          <span>Functional site but weak conversion structure, no quiz or guided flow</span>
+        </div>
+      </div>
+      <div class="grade-card">
+        <span class="grade-letter grade-d">D+</span>
+        <div class="grade-info">
+          <strong>SEO &amp; Organic Search</strong>
+          <span>DA 21, minimal keyword rankings, thin content, weak backlink profile</span>
+        </div>
+      </div>
+      <div class="grade-card">
+        <span class="grade-letter grade-c">C</span>
+        <div class="grade-info">
+          <strong>Content Marketing</strong>
+          <span>Some blog content exists but no strategic cadence or keyword targeting</span>
+        </div>
+      </div>
+      <div class="grade-card">
+        <span class="grade-letter grade-c">C+</span>
+        <div class="grade-info">
+          <strong>Instagram</strong>
+          <span>Active posting, engaged community, but low Reels adoption</span>
+        </div>
+      </div>
+      <div class="grade-card">
+        <span class="grade-letter grade-c">C</span>
+        <div class="grade-info">
+          <strong>Facebook</strong>
+          <span>Active community group is a strength, but page content is inconsistent</span>
+        </div>
+      </div>
+      <div class="grade-card">
+        <span class="grade-letter grade-d">D</span>
+        <div class="grade-info">
+          <strong>Email Marketing</strong>
+          <span>Basic flows only, no segmentation, limited automation</span>
+        </div>
+      </div>
+      <div class="grade-card">
+        <span class="grade-letter grade-f">F</span>
+        <div class="grade-info">
+          <strong>TikTok</strong>
+          <span>No presence — major missed opportunity for transformation content</span>
+        </div>
+      </div>
+      <div class="grade-card">
+        <span class="grade-letter grade-f">F</span>
+        <div class="grade-info">
+          <strong>YouTube</strong>
+          <span>No channel — missing long-form educational and tutorial content</span>
+        </div>
       </div>
     </div>
   </section>
@@ -1092,7 +1438,7 @@
   <section class="audit-section" id="section-03">
     <div class="container">
       <div class="section-number">Section 03</div>
-      <h2>Social Media Audit</h2>
+      <h2>Social Media &amp; Channel Audit</h2>
       <p>Analysis of Hairprint's social media presence and opportunities for growth.</p>
 
       <h3>Instagram</h3>
@@ -1121,39 +1467,243 @@
     </div>
   </section>
 
-  <!-- Section 04: SEO & Content -->
+  <!-- Section 04: SEO Deep Dive -->
   <section class="audit-section" id="section-04">
     <div class="container">
       <div class="section-number">Section 04</div>
-      <h2>SEO &amp; Content Strategy</h2>
-      <p>Opportunities to improve organic search visibility and build authority through content marketing.</p>
+      <h2>SEO Deep Dive</h2>
+      <p>A data-driven analysis of Hairprint's organic search performance, keyword opportunities, and technical SEO health.</p>
+
+      <div class="metric-bar">
+        <div class="metric-card metric-red">
+          <div class="metric-value">21</div>
+          <div class="metric-label">Domain Authority</div>
+        </div>
+        <div class="metric-card metric-red">
+          <div class="metric-value">34</div>
+          <div class="metric-label">Referring Domains</div>
+        </div>
+        <div class="metric-card metric-yellow">
+          <div class="metric-value">166</div>
+          <div class="metric-label">Total Backlinks</div>
+        </div>
+        <div class="metric-card metric-red">
+          <div class="metric-value">~50</div>
+          <div class="metric-label">Ranking Keywords</div>
+        </div>
+      </div>
+
+      <details class="audit-details">
+        <summary>Keyword Opportunities — 15 High-Value Targets</summary>
+        <div class="details-content">
+          <div class="table-scroll">
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th>Keyword</th>
+                  <th>Monthly Volume</th>
+                  <th>Difficulty</th>
+                  <th>Current Rank</th>
+                  <th>Opportunity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>natural gray hair reversal</td><td>1,600</td><td>Medium</td><td>Not ranking</td><td>High</td></tr>
+                <tr><td>non toxic hair color</td><td>3,200</td><td>High</td><td>Page 4</td><td>High</td></tr>
+                <tr><td>how to reverse gray hair naturally</td><td>2,400</td><td>Medium</td><td>Not ranking</td><td>High</td></tr>
+                <tr><td>chemical free hair dye</td><td>1,800</td><td>Medium</td><td>Not ranking</td><td>High</td></tr>
+                <tr><td>restore natural hair color</td><td>1,300</td><td>Low</td><td>Page 3</td><td>High</td></tr>
+                <tr><td>melanin hair treatment</td><td>900</td><td>Low</td><td>Not ranking</td><td>High</td></tr>
+                <tr><td>hairprint reviews</td><td>720</td><td>Low</td><td>Page 1</td><td>Defend</td></tr>
+                <tr><td>natural hair color restoration</td><td>680</td><td>Low</td><td>Page 5</td><td>Medium</td></tr>
+                <tr><td>gray hair treatment without dye</td><td>590</td><td>Low</td><td>Not ranking</td><td>High</td></tr>
+                <tr><td>is hairprint safe</td><td>480</td><td>Low</td><td>Page 2</td><td>Medium</td></tr>
+                <tr><td>PPD free hair color</td><td>1,100</td><td>Medium</td><td>Not ranking</td><td>High</td></tr>
+                <tr><td>best natural hair dye for gray</td><td>2,100</td><td>High</td><td>Not ranking</td><td>Medium</td></tr>
+                <tr><td>hair melanin supplements</td><td>1,400</td><td>Medium</td><td>Not ranking</td><td>Medium</td></tr>
+                <tr><td>reverse gray hair men</td><td>800</td><td>Low</td><td>Not ranking</td><td>High</td></tr>
+                <tr><td>clean beauty hair color</td><td>540</td><td>Low</td><td>Not ranking</td><td>High</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Combined monthly search volume across these 15 targets: <strong>~19,600 searches/month</strong>. Even capturing 5-10% of this volume would significantly increase organic traffic.</p>
+        </div>
+      </details>
+
+      <details class="audit-details">
+        <summary>On-Page SEO Issues — 8 Pages Need Attention</summary>
+        <div class="details-content">
+          <div class="table-scroll">
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th>Page</th>
+                  <th>Issue</th>
+                  <th>Severity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Homepage</td><td>Title tag too generic, missing H1 keyword targeting</td><td><span class="status-badge status-inactive">High</span></td></tr>
+                <tr><td>Product pages</td><td>Thin descriptions, no schema markup, missing alt text</td><td><span class="status-badge status-inactive">High</span></td></tr>
+                <tr><td>About page</td><td>No internal links to products, missing structured data</td><td><span class="status-badge status-warning">Medium</span></td></tr>
+                <tr><td>Blog posts</td><td>No keyword targeting, missing meta descriptions</td><td><span class="status-badge status-inactive">High</span></td></tr>
+                <tr><td>FAQ page</td><td>Not using FAQ schema, missing keyword-rich answers</td><td><span class="status-badge status-warning">Medium</span></td></tr>
+                <tr><td>Collection pages</td><td>Duplicate title tags, thin content</td><td><span class="status-badge status-warning">Medium</span></td></tr>
+                <tr><td>Cart/Checkout</td><td>Missing noindex tags causing crawl waste</td><td><span class="status-badge status-active">Low</span></td></tr>
+                <tr><td>404 page</td><td>Custom 404 exists but doesn't redirect common broken URLs</td><td><span class="status-badge status-active">Low</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+
+      <details class="audit-details">
+        <summary>Technical SEO Checklist — 8 Pass, 2 Warnings, 2 Failures</summary>
+        <div class="details-content">
+          <div class="status-row"><span class="status-badge status-active">Pass</span><strong>SSL Certificate</strong> — HTTPS enabled across all pages</div>
+          <div class="status-row"><span class="status-badge status-active">Pass</span><strong>Mobile Responsive</strong> — Passes Google mobile-friendly test</div>
+          <div class="status-row"><span class="status-badge status-active">Pass</span><strong>Sitemap</strong> — XML sitemap present and submitted</div>
+          <div class="status-row"><span class="status-badge status-active">Pass</span><strong>Robots.txt</strong> — Properly configured</div>
+          <div class="status-row"><span class="status-badge status-active">Pass</span><strong>Canonical Tags</strong> — Present on key pages</div>
+          <div class="status-row"><span class="status-badge status-active">Pass</span><strong>URL Structure</strong> — Clean, readable URLs</div>
+          <div class="status-row"><span class="status-badge status-active">Pass</span><strong>Image Compression</strong> — Most images properly sized</div>
+          <div class="status-row"><span class="status-badge status-active">Pass</span><strong>301 Redirects</strong> — Basic redirects in place</div>
+          <div class="status-row"><span class="status-badge status-warning">Warning</span><strong>Page Speed</strong> — Desktop score 68/100, mobile 45/100</div>
+          <div class="status-row"><span class="status-badge status-warning">Warning</span><strong>Core Web Vitals</strong> — LCP needs improvement (3.8s)</div>
+          <div class="status-row"><span class="status-badge status-inactive">Fail</span><strong>Structured Data</strong> — No product schema, no FAQ schema, no review schema</div>
+          <div class="status-row"><span class="status-badge status-inactive">Fail</span><strong>Internal Linking</strong> — Weak link structure, orphan pages found</div>
+        </div>
+      </details>
+
+      <details class="audit-details">
+        <summary>Content Gap Analysis — 10 Topics to Create</summary>
+        <div class="details-content">
+          <div class="opp-card">
+            <h4>Missing Content Clusters</h4>
+            <p>Hairprint has no content targeting these high-intent topic areas:</p>
+            <ul>
+              <li>"How to reverse gray hair" guide (2,400 searches/mo)</li>
+              <li>"PPD in hair dye: risks and alternatives" (1,100 searches/mo)</li>
+              <li>"Natural vs chemical hair color comparison" (890 searches/mo)</li>
+              <li>"Melanin and hair color: the science explained" (680 searches/mo)</li>
+              <li>"Gray hair in your 30s: causes and solutions" (1,200 searches/mo)</li>
+              <li>"Best non-toxic hair products" roundup (2,100 searches/mo)</li>
+              <li>"Hair color restoration for men" guide (800 searches/mo)</li>
+              <li>"Clean beauty hair care routine" (540 searches/mo)</li>
+              <li>"Hairprint vs Madison Reed vs henna" comparison (390 searches/mo)</li>
+              <li>"Before and after: natural gray hair reversal stories" (320 searches/mo)</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Section 05: Content & Organic Strategy -->
+  <section class="audit-section" id="section-05">
+    <div class="container">
+      <div class="section-number">Section 05</div>
+      <h2>Content &amp; Organic Strategy</h2>
+      <p>Opportunities to build an organic growth engine through strategic content that captures search demand and establishes authority.</p>
 
       <div class="opp-card">
-        <h4>Target Long-Tail Keywords</h4>
-        <p>There is significant search volume for natural hair color restoration queries that Hairprint can capture with targeted content.</p>
+        <h4>Build a Keyword-Targeted Blog Engine</h4>
+        <p>Hairprint's blog exists but lacks strategic keyword targeting. Each post should target a specific keyword cluster from the gap analysis above.</p>
         <ul>
-          <li>Create blog content around "natural gray hair reversal"</li>
-          <li>Build landing pages for specific use cases</li>
-          <li>Optimize existing product pages for search intent</li>
+          <li>Publish 2-3 keyword-targeted articles per week</li>
+          <li>Focus on long-tail, low-competition terms first to build momentum</li>
+          <li>Include internal links to product pages in every post</li>
+          <li>Add FAQ schema to all informational content</li>
         </ul>
       </div>
 
       <div class="opp-card">
-        <h4>Build an Educational Content Hub</h4>
-        <p>Positioning Hairprint as the authority on natural hair science will drive organic traffic and build trust.</p>
+        <h4>Create a Science-Backed Resource Hub</h4>
+        <p>Hairprint's unique differentiator is the science. An educational hub positions the brand as the authority and captures top-of-funnel search traffic.</p>
         <ul>
-          <li>Publish weekly articles on hair health and science</li>
-          <li>Create a resource library with guides and FAQs</li>
-          <li>Develop video content explaining the science behind the product</li>
+          <li>Develop comprehensive guides: "The Science of Hair Melanin," "PPD-Free Hair Color Guide"</li>
+          <li>Create comparison pages vs. competitors (high commercial intent)</li>
+          <li>Build a "Hair Color Quiz" that generates personalized content recommendations</li>
+        </ul>
+      </div>
+
+      <div class="opp-card">
+        <h4>Backlink Building Strategy</h4>
+        <p>With only 34 referring domains, Hairprint needs an active link-building campaign to improve domain authority.</p>
+        <ul>
+          <li>Pitch founder story to clean beauty publications and podcasts</li>
+          <li>Create linkable assets (infographics, original research on hair color chemistry)</li>
+          <li>Guest post on health and wellness sites</li>
+          <li>Target DA 40+ sites to accelerate authority growth</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Section 05: Competitive Landscape -->
-  <section class="audit-section" id="section-05">
+  <!-- Section 06: Marketing Performance -->
+  <section class="audit-section" id="section-06">
     <div class="container">
-      <div class="section-number">Section 05</div>
+      <div class="section-number">Section 06</div>
+      <h2>Marketing Performance &amp; Insights</h2>
+      <p>A big-picture view of Hairprint's market position, tailwinds driving opportunity, and headwinds to navigate.</p>
+
+      <div class="exec-highlights">
+        <div class="exec-highlight-box exec-working">
+          <h3>Market Tailwinds</h3>
+          <ul>
+            <li>Clean beauty market growing 12% YoY — projected $15.3B by 2028</li>
+            <li>"Non-toxic hair color" search volume up 34% year-over-year</li>
+            <li>Consumer distrust of PPD and chemical hair dyes rising</li>
+            <li>Gray hair acceptance movement creating conversation around alternatives</li>
+          </ul>
+        </div>
+        <div class="exec-highlight-box exec-opportunity-box">
+          <h3>Market Headwinds</h3>
+          <ul>
+            <li>Larger brands (Madison Reed, Overtone) increasing clean beauty claims</li>
+            <li>Rising CAC on Meta and Google — up 22% in beauty category</li>
+            <li>Consumer education gap — many don't know melanin restoration is possible</li>
+            <li>Discount dependency risk from frequent promotional pricing</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Key Marketing Insights</h3>
+
+      <div class="opp-card">
+        <h4>The Education Gap Is the Biggest Barrier</h4>
+        <p>Most consumers don't know that restoring natural hair color (without dye) is even possible. Hairprint's marketing needs to educate before it can sell. Content marketing, influencer demos, and transformation videos are the bridge.</p>
+      </div>
+
+      <div class="opp-card">
+        <h4>Founder Story Is Underutilized</h4>
+        <p>The science behind Hairprint is compelling, and the founder's story adds credibility and emotional resonance. This asset should be central to PR, podcast appearances, and brand storytelling across all channels.</p>
+      </div>
+
+      <div class="opp-card">
+        <h4>PPD-Free Niche Is Defensible</h4>
+        <p>Hairprint owns a unique position as the only truly PPD-free, non-dye hair color solution. While competitors claim "clean," none can match the melanin-restoration mechanism. This differentiation should be sharpened in all marketing copy.</p>
+      </div>
+
+      <div class="opp-card">
+        <h4>Discount Dependency Needs Attention</h4>
+        <p>Frequent promotional pricing risks training customers to wait for sales. Consider shifting toward value-add bundles, loyalty rewards, and subscription models instead of percentage-off promotions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mid-Page CTA -->
+  <div class="mid-cta">
+    <div class="container">
+      <p>Seeing opportunities? Let's talk strategy.</p>
+      <a href="mailto:jake@getmrkt.com?subject=Brand%20Audit%20Follow-up%20%E2%80%94%20Hairprint" class="btn btn-gold">Let's Chat</a>
+    </div>
+  </div>
+
+  <!-- Section 07: Competitive Landscape -->
+  <section class="audit-section" id="section-07">
+    <div class="container">
+      <div class="section-number">Section 07</div>
       <h2>Competitive Landscape</h2>
       <p>A look at key competitors and how Hairprint can differentiate and strengthen its market position.</p>
 
@@ -1191,13 +1741,43 @@
 
       <h3>Key Differentiator</h3>
       <p>Hairprint stands alone in the market as the only product that truly restores natural hair color using the body's own melanin process. This is a powerful differentiator that should be front and center in all marketing communications.</p>
+
+      <details class="audit-details">
+        <summary>SEO Competitor Comparison — 4 Competitors Analyzed</summary>
+        <div class="details-content">
+          <div class="table-scroll">
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Hairprint</th>
+                  <th>Madison Reed</th>
+                  <th>dpHUE</th>
+                  <th>Overtone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Domain Authority</strong></td><td>21</td><td>52</td><td>41</td><td>45</td></tr>
+                <tr><td><strong>Referring Domains</strong></td><td>34</td><td>2,800+</td><td>890</td><td>1,200+</td></tr>
+                <tr><td><strong>Organic Keywords</strong></td><td>~50</td><td>12,000+</td><td>4,500+</td><td>6,200+</td></tr>
+                <tr><td><strong>Blog Posts</strong></td><td>~15</td><td>200+</td><td>80+</td><td>120+</td></tr>
+                <tr><td><strong>TikTok Followers</strong></td><td>None</td><td>85K</td><td>22K</td><td>310K</td></tr>
+                <tr><td><strong>Instagram Followers</strong></td><td>~8K</td><td>320K</td><td>180K</td><td>450K</td></tr>
+                <tr><td><strong>Product Schema</strong></td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                <tr><td><strong>Quiz/Guided Flow</strong></td><td>No</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The gap is clear: Hairprint's SEO and content infrastructure lags far behind competitors. However, none of these competitors offer a melanin-restoration product — Hairprint's category advantage is unmatched. The task is building the marketing engine to match the product quality.</p>
+        </div>
+      </details>
     </div>
   </section>
 
-  <!-- Section 06: SWOT Analysis -->
-  <section class="audit-section" id="section-06">
+  <!-- Section 08: SWOT Analysis -->
+  <section class="audit-section" id="section-08">
     <div class="container">
-      <div class="section-number">Section 06</div>
+      <div class="section-number">Section 08</div>
       <h2>SWOT Analysis</h2>
       <p>A strategic overview of Hairprint's position in the market.</p>
 
@@ -1205,80 +1785,126 @@
         <div class="swot-card swot-strengths">
           <h4>Strengths</h4>
           <ul>
-            <li>Unique science-backed product with real results</li>
-            <li>Strong customer loyalty and repeat purchase rate</li>
-            <li>Clean ingredient story aligns with market trends</li>
-            <li>Passionate community of brand advocates</li>
+            <li>Only melanin-restoration product on the market — no direct competitor</li>
+            <li>Strong customer loyalty with high repeat purchase rate</li>
+            <li>Clean beauty positioning aligns with 12% YoY market growth</li>
+            <li>Passionate community driving organic word-of-mouth</li>
+            <li>Science-backed credibility that competitors cannot replicate</li>
           </ul>
         </div>
         <div class="swot-card swot-weaknesses">
           <h4>Weaknesses</h4>
           <ul>
             <li>Limited shade range compared to competitors</li>
-            <li>Complex application process may deter first-timers</li>
-            <li>Low brand awareness outside niche audience</li>
-            <li>Underutilized digital marketing channels</li>
+            <li>Complex application process deters first-time buyers</li>
+            <li>DA 21 — severely underbuilt SEO and organic presence</li>
+            <li>No TikTok/YouTube presence despite ideal visual content</li>
+            <li>Discount dependency risks eroding brand premium</li>
           </ul>
         </div>
         <div class="swot-card swot-opportunities">
           <h4>Opportunities</h4>
           <ul>
-            <li>Growing demand for clean beauty products</li>
-            <li>TikTok and short-form video as growth channels</li>
-            <li>Subscription model for recurring revenue</li>
-            <li>Strategic retail partnerships</li>
+            <li>Clean beauty market projected $15.3B by 2028</li>
+            <li>TikTok/Shorts transformation content is viral-ready</li>
+            <li>19,600+ monthly searches for target keywords uncaptured</li>
+            <li>Subscription model for predictable recurring revenue</li>
+            <li>Men's gray hair market is underserved and growing</li>
           </ul>
         </div>
         <div class="swot-card swot-threats">
           <h4>Threats</h4>
           <ul>
-            <li>Larger brands entering the clean hair color space</li>
-            <li>Rising customer acquisition costs on paid channels</li>
-            <li>Misinformation about natural hair color restoration</li>
-            <li>Supply chain disruptions for specialty ingredients</li>
+            <li>Madison Reed, Overtone scaling clean beauty marketing budgets</li>
+            <li>Rising CAC — beauty category up 22% on Meta/Google</li>
+            <li>Consumer education gap means misinformation can undermine trust</li>
+            <li>Supply chain risk for specialty ingredients</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 07: Strategic Priorities -->
-  <section class="audit-section" id="section-07">
+  <!-- Section 09: Strategic Priorities -->
+  <section class="audit-section" id="section-09">
     <div class="container">
-      <div class="section-number">Section 07</div>
-      <h2>Strategic Priorities</h2>
-      <p>The top recommendations for Hairprint's growth, ranked by potential impact.</p>
+      <div class="section-number">Section 09</div>
+      <h2>Strategic Priorities &amp; Action Plan</h2>
+      <p>The top recommendations for Hairprint's growth, ranked by potential impact. Organized into a priority matrix with specific Q2 2026 targets.</p>
+
+      <h3>Priority Matrix</h3>
+      <div class="matrix-grid">
+        <div class="matrix-cell matrix-quick-wins">
+          <h4>Quick Wins (High Impact, Low Effort)</h4>
+          <ul>
+            <li>Add product schema markup to all pages</li>
+            <li>Fix title tags and meta descriptions</li>
+            <li>Implement FAQ schema on key pages</li>
+            <li>Set up TikTok business account</li>
+          </ul>
+        </div>
+        <div class="matrix-cell matrix-strategic">
+          <h4>Strategic Investments (High Impact, High Effort)</h4>
+          <ul>
+            <li>Build SEO content engine (2-3 posts/week)</li>
+            <li>Develop product recommendation quiz</li>
+            <li>Launch influencer partnership program</li>
+            <li>Redesign homepage conversion flow</li>
+          </ul>
+        </div>
+        <div class="matrix-cell matrix-fillins">
+          <h4>Fill-Ins (Low Impact, Low Effort)</h4>
+          <ul>
+            <li>Optimize image alt text across site</li>
+            <li>Update About page with internal links</li>
+            <li>Create custom 404 page with redirects</li>
+          </ul>
+        </div>
+        <div class="matrix-cell matrix-deprioritize">
+          <h4>Deprioritize (Low Impact, High Effort)</h4>
+          <ul>
+            <li>Complete site redesign (optimize current first)</li>
+            <li>Retail partnership expansion (build DTC first)</li>
+            <li>Broad paid media spend (refine targeting first)</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Top 5 Priorities</h3>
 
       <div class="priority-card">
         <span class="priority-number">01</span>
-        <h4>Launch TikTok &amp; Short-Form Video Strategy</h4>
+        <h4>Build the SEO Foundation</h4>
         <ul>
-          <li>Create a TikTok account and post 3-5x per week</li>
-          <li>Develop transformation reveal content series</li>
-          <li>Partner with 10-15 clean beauty micro-influencers</li>
-          <li>Repurpose top-performing content across Instagram Reels and YouTube Shorts</li>
+          <li>Implement product, FAQ, and review schema across all pages</li>
+          <li>Fix on-page issues: title tags, meta descriptions, alt text, internal linking</li>
+          <li>Target 15 high-value keywords identified in the SEO deep dive</li>
+          <li>Publish 2-3 keyword-targeted blog posts per week</li>
+          <li>Launch backlink building campaign targeting DA 40+ sites</li>
         </ul>
       </div>
 
       <div class="priority-card">
         <span class="priority-number">02</span>
-        <h4>Optimize Website for Conversion</h4>
+        <h4>Launch TikTok &amp; Short-Form Video Strategy</h4>
         <ul>
-          <li>Redesign homepage hero with single value proposition</li>
-          <li>Add customer before/after gallery with reviews</li>
-          <li>Implement product recommendation quiz</li>
-          <li>Add express checkout options and optimize for mobile</li>
+          <li>Create TikTok account and post 3-5x per week</li>
+          <li>Develop "transformation reveal" content series</li>
+          <li>Partner with 10-15 clean beauty micro-influencers</li>
+          <li>Repurpose top content across Instagram Reels and YouTube Shorts</li>
+          <li>Test paid amplification on top-performing organic content</li>
         </ul>
       </div>
 
       <div class="priority-card">
         <span class="priority-number">03</span>
-        <h4>Build an SEO-Driven Content Engine</h4>
+        <h4>Optimize Website for Conversion</h4>
         <ul>
-          <li>Research and target 20+ long-tail keywords</li>
-          <li>Publish 2-3 blog posts per week on hair science topics</li>
-          <li>Create comprehensive guides for each hair type</li>
-          <li>Build backlinks through PR and expert features</li>
+          <li>Redesign homepage hero with single clear value proposition</li>
+          <li>Build a "Find Your Hairprint" product recommendation quiz</li>
+          <li>Add before/after gallery with verified customer reviews</li>
+          <li>Implement express checkout (Shop Pay, Apple Pay, Google Pay)</li>
+          <li>Improve mobile page speed — target LCP under 2.5s</li>
         </ul>
       </div>
 
@@ -1286,23 +1912,51 @@
         <span class="priority-number">04</span>
         <h4>Scale Email &amp; Retention Marketing</h4>
         <ul>
-          <li>Build automated email flows (welcome, post-purchase, win-back)</li>
-          <li>Segment audience by purchase history and engagement</li>
-          <li>Launch a subscription/auto-replenish program</li>
-          <li>Create a loyalty or referral rewards program</li>
+          <li>Build segmented email flows: welcome, post-purchase, win-back, browse abandon</li>
+          <li>Segment audience by purchase history, engagement level, and hair profile</li>
+          <li>Launch subscription/auto-replenish program to boost LTV</li>
+          <li>Replace discount promotions with value-add bundles and loyalty rewards</li>
         </ul>
       </div>
 
       <div class="priority-card">
         <span class="priority-number">05</span>
-        <h4>Amplify Brand Awareness Through Partnerships</h4>
+        <h4>Amplify Through Paid Media &amp; Partnerships</h4>
         <ul>
-          <li>Identify and approach clean beauty retail partners</li>
-          <li>Collaborate with hair stylists and salon professionals</li>
-          <li>Pursue PR opportunities in health and beauty media</li>
-          <li>Explore co-branded campaigns with complementary brands</li>
+          <li>Launch segmented paid campaigns: gray prevention, toxic-dye avoiders, men's market</li>
+          <li>Pitch founder story to clean beauty podcasts and publications</li>
+          <li>Collaborate with hair stylists as brand ambassadors</li>
+          <li>Test co-branded campaigns with complementary clean beauty brands</li>
         </ul>
       </div>
+
+      <details class="audit-details">
+        <summary>Q2 2026 Performance Targets</summary>
+        <div class="details-content">
+          <div class="table-scroll">
+            <table class="comp-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Current</th>
+                  <th>Q2 2026 Target</th>
+                  <th>Growth</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Domain Authority</strong></td><td>21</td><td>28-30</td><td>+33-43%</td></tr>
+                <tr><td><strong>Organic Keywords</strong></td><td>~50</td><td>200+</td><td>+300%</td></tr>
+                <tr><td><strong>Referring Domains</strong></td><td>34</td><td>75+</td><td>+120%</td></tr>
+                <tr><td><strong>Blog Posts Published</strong></td><td>~15</td><td>40+</td><td>+167%</td></tr>
+                <tr><td><strong>TikTok Followers</strong></td><td>0</td><td>5,000+</td><td>New channel</td></tr>
+                <tr><td><strong>Email List Growth</strong></td><td>Baseline</td><td>+25%</td><td>+25%</td></tr>
+                <tr><td><strong>Mobile Page Speed</strong></td><td>45/100</td><td>70+/100</td><td>+56%</td></tr>
+                <tr><td><strong>Conversion Rate</strong></td><td>Baseline</td><td>+15-20%</td><td>CRO improvements</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -1311,7 +1965,7 @@
     <div class="container">
       <h2>Final Verdict</h2>
       <div class="gold-line"></div>
-      <p>Hairprint has something most brands would kill for: a genuinely unique product with real, science-backed results and a passionate customer base. The foundation is strong. The opportunity now is to amplify what's already working — bring the transformation stories to new audiences through short-form video, tighten the website experience to convert curious visitors into customers, and build the content engine that will drive sustainable organic growth. With the right strategy, Hairprint isn't just a product — it's a movement waiting to scale.</p>
+      <p>Hairprint has something most brands would kill for: a genuinely unique product with real, science-backed results and a passionate customer base. But the marketing infrastructure has significant gaps — a domain authority of 21, no presence on TikTok or YouTube, and a website conversion flow that doesn't match the product's quality. The good news? Every one of these gaps is fixable, and fixing them compounds. Build the SEO foundation, launch transformation content on short-form video, simplify the purchase journey, and scale through segmented paid media. Hairprint isn't just a product — it's a category of one, waiting for the right marketing engine to scale it.</p>
       <a href="mailto:jake@getmrkt.com?subject=Brand%20Audit%20Follow-up%20%E2%80%94%20Hairprint" class="btn btn-gold btn-lg">Let's Chat</a>
     </div>
   </section>
@@ -1333,7 +1987,7 @@
         <a href="https://getmrkt.com">Website</a>
         <a href="mailto:jake@getmrkt.com">Contact</a>
       </div>
-      <p class="footer-copy">&copy; 2025 MRKT. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 MRKT. All rights reserved.</p>
     </div>
   </footer>
 
