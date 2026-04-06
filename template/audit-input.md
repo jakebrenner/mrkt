@@ -1,6 +1,8 @@
 # Brand Audit Input Template
 
 > **Instructions for Claude:** Use this completed template to generate a new audit HTML page at `audits/{brand-slug}.html`. Follow the structure, styling, and components defined in `template/reference.html` and `CLAUDE.md`. Every field marked **(required)** must be filled in. Fields marked **(optional)** can be left as `N/A` and will be omitted or use a placeholder.
+>
+> **MRKT Service Focus:** The audit should lead with and emphasize these core services: (1) Paid Social (Meta), (2) Paid Search (Google Ads), (3) Website CRO, (4) Email Automations & Monthly Promotions. SEO should be positioned as foundational work (quick wins, schema, on-page fixes) rather than ongoing link building or content engine work. Be honest about email — we typically have limited visibility into a prospect's email platform, so frame observations as external assessments.
 
 ---
 
@@ -24,10 +26,10 @@
 
 | Metric | Value | Health (green/yellow/red) |
 |--------|-------|--------------------------|
+| Paid Ad Channels | [e.g., 0] | [red] |
+| Conversion Quiz | [e.g., No] | [red] |
+| Email Flows | [e.g., Basic] | [yellow] |
 | Domain Authority | [e.g., 21] | [red] |
-| Referring Domains | [e.g., 34] | [red] |
-| Backlinks | [e.g., 166] | [yellow] |
-| Avg Review Score | [e.g., 3.9] | [yellow] |
 | Overall Grade | [e.g., C-] | [yellow] |
 
 ### What's Working Well (3-5 bullet points)
@@ -44,14 +46,14 @@
 
 | Channel | Grade (A/B/C/D/F, with +/- optional) | Short Note |
 |---------|---------------------------------------|------------|
-| Website | [e.g., C+] | [e.g., Weak conversion flow] |
-| SEO | [e.g., D+] | [e.g., DA 21, thin content] |
-| Content | [e.g., C] | [e.g., No keyword strategy] |
-| Instagram | [e.g., C+] | [e.g., Low Reels adoption] |
-| Facebook | [e.g., C] | [e.g., Inconsistent page] |
+| Paid Social (Meta) | [e.g., F] | [e.g., No active campaigns] |
+| Paid Search (Google) | [e.g., F] | [e.g., No active campaigns] |
+| Website & CRO | [e.g., C+] | [e.g., Weak conversion flow] |
 | Email | [e.g., D] | [e.g., No segmentation] |
+| Instagram (Organic) | [e.g., C+] | [e.g., Low Reels adoption] |
+| Facebook (Organic) | [e.g., C] | [e.g., Inconsistent page] |
+| SEO Foundation | [e.g., D+] | [e.g., DA 21, quick wins available] |
 | TikTok | [e.g., F] | [e.g., No presence] |
-| YouTube | [e.g., F] | [e.g., No channel] |
 
 ### Top Opportunities (3-4 numbered items, each with title + description)
 
@@ -80,14 +82,16 @@
 
 | Channel | Status (Active/Partial/Missing) | Description |
 |---------|--------------------------------|-------------|
-| Website | [Active] | [e.g., Main e-commerce site live] |
-| Instagram | [Active] | [e.g., Regular posting with engaged community] |
-| Facebook | [Active] | [e.g., Business page with active community group] |
+| Website | [Active] | [e.g., Main e-commerce site live on Shopify] |
+| Meta Ads (Paid Social) | [Missing] | [e.g., No active paid social campaigns] |
+| Google Ads (Paid Search) | [Missing] | [e.g., No active search campaigns] |
+| Instagram (Organic) | [Active] | [e.g., Regular posting with engaged community] |
+| Facebook (Organic) | [Active] | [e.g., Business page with active community group] |
 | Email Marketing | [Partial] | [e.g., Basic flows set up, room for optimization] |
 | TikTok | [Missing] | [e.g., No presence on the platform] |
 | YouTube | [Missing] | [e.g., No dedicated channel] |
 
-> Add or remove channels as needed. Use Active (green), Partial (yellow), or Missing (red).
+> Add or remove channels as needed. Use Active (green), Partial (yellow), or Missing (red). Lead with paid channels and email.
 
 ---
 
@@ -133,7 +137,9 @@
 
 ---
 
-## Section 03: SEO Deep Dive (required)
+## Section 03: SEO & Organic Foundation (required)
+
+> **Note:** Frame SEO as foundational work — quick wins like schema markup, title tag fixes, on-page optimization — NOT ongoing link building or content engine work. The goal is to establish a baseline that supports paid and CRO efforts.
 
 ### SEO Health Metrics (for donut chart + metric cards)
 
@@ -146,7 +152,7 @@
 | Mobile Page Speed (out of 100) | [e.g., 45] | [yellow] |
 
 ### Keyword Opportunities (for bar chart + expandable table)
-> Provide keywords sorted by monthly volume (highest first). Top 8 shown as bars, all shown in table.
+> Focus on keywords that also inform paid search targeting. These are terms worth bidding on AND building organic presence for over time.
 
 | Keyword | Monthly Volume | Difficulty (Low/Medium/High) | Current Rank | Opportunity (High/Medium/Defend) |
 |---------|---------------|------------------------------|-------------|--------------------------------|
@@ -157,7 +163,8 @@
 
 **Total combined monthly search volume:** [e.g., ~19,600]
 
-### On-Page SEO Issues (for expandable table)
+### On-Page SEO Quick Wins (for expandable table)
+> Focus on fixes that can be done quickly and support paid media landing pages.
 
 | Page | Issue | Severity (High/Medium/Low) |
 |------|-------|---------------------------|
@@ -179,8 +186,8 @@
 
 **Summary counts:** [e.g., 8 Pass, 2 Warnings, 2 Failures]
 
-### Content Gap Analysis (for expandable list)
-> List 8-10 content topics the brand should create, with search volume.
+### Content Gap Analysis (optional — for expandable list)
+> List 5-8 content topics that could support both organic and paid efforts.
 
 | Topic | Monthly Search Volume |
 |-------|----------------------|
@@ -190,71 +197,136 @@
 
 ---
 
-## Section 04: Website & Conversion Analysis (required)
+## Section 04: Website & Conversion Rate Optimization (required)
+
+> **Note:** This is a core MRKT service area. Focus on conversion flow, product pages, quiz/guided selling, checkout optimization, and CTA effectiveness. Frame recommendations as CRO improvements that directly impact ROAS from paid channels.
 
 ### Opportunity Cards (3-5 cards, each with title + description + action items)
 
-#### [Card Title, e.g., "Simplify the Homepage Hero"]
-> [1-2 sentence description of the issue/opportunity]
+#### [Card Title, e.g., "Add a Conversion Quiz / Guided Selling Flow"]
+> [1-2 sentence description of the issue/opportunity and its impact on conversion rate]
 - [Action item 1]
 - [Action item 2]
 - [Action item 3]
 
-#### [Card Title]
-> [Description]
+#### [Card Title, e.g., "Optimize Product Pages for Paid Traffic"]
+> [Description — how paid traffic landing on these pages is being lost]
 - [Action items]
 
-#### [Card Title]
+#### [Card Title, e.g., "Streamline Checkout Flow"]
+> [Description — reduce friction, abandoned cart recovery, etc.]
+- [Action items]
+
+#### [Card Title, e.g., "Strengthen CTAs & Social Proof"] (optional)
 > [Description]
 - [Action items]
 
 ---
 
-## Section 05: Social Media & Channel Audit (required)
+## Section 05: Social Media & Paid Social Strategy (required)
 
-### Per-Channel Analysis
-> For each active or relevant channel, provide a heading, 1-2 sentence analysis, and 3 bullet point recommendations.
+> **Note:** This is a core MRKT service area. Lead with paid social (Meta Ads) strategy, then cover organic channel analysis. Frame organic content as fuel for paid campaigns.
 
-#### [Channel Name, e.g., Instagram]
+### Meta Ads Strategy (Paid Social — required)
+> Describe the opportunity for paid social advertising on Meta (Facebook + Instagram). Include audience targeting ideas, campaign types, and creative strategy.
+
+#### Campaign Strategy
+- [e.g., Prospecting campaigns targeting lookalike audiences based on existing customers]
+- [e.g., Retargeting campaigns for site visitors, cart abandoners, and email subscribers]
+- [e.g., Advantage+ Shopping campaigns for broad product discovery]
+
+#### Audience Segments
+| Segment | Description | Campaign Type |
+|---------|-------------|---------------|
+| [e.g., Lookalike — Purchasers] | [1-3% LAL based on past buyers] | [Prospecting] |
+| [e.g., Interest-based — Clean Beauty] | [Interest + behavior targeting] | [Prospecting] |
+| [e.g., Site Visitors 30d] | [Retarget recent browsers] | [Retargeting] |
+| [e.g., Cart Abandoners 14d] | [High-intent re-engagement] | [Retargeting] |
+
+#### Creative Recommendations
+- [e.g., UGC-style before/after testimonial videos]
+- [e.g., Educational carousel ads explaining the science]
+- [e.g., Founder story video for brand awareness]
+
+### Google Ads Strategy (Paid Search — required)
+> Describe the opportunity for Google Ads. Include keyword themes, campaign types, and landing page alignment.
+
+- [e.g., Branded search campaigns to capture existing demand]
+- [e.g., Non-branded campaigns targeting high-intent category keywords]
+- [e.g., Performance Max campaigns for Shopping + Display + YouTube]
+
+### Per-Channel Organic Analysis
+> For each active organic channel, provide a heading, 1-2 sentence analysis, and 3 bullet point recommendations. Frame organic content as supporting paid efforts.
+
+#### [Channel Name, e.g., Instagram (Organic)]
 > [Analysis paragraph]
 - [Recommendation 1]
 - [Recommendation 2]
 - [Recommendation 3]
 
-#### [Channel Name, e.g., Facebook]
+#### [Channel Name, e.g., Facebook (Organic)]
 > [Analysis paragraph]
 - [Recommendations]
 
 #### [Channel Name, e.g., TikTok Opportunity]
-> [Analysis paragraph]
+> [Analysis paragraph — frame as content creation for paid amplification]
 - [Recommendations]
 
 ---
 
-## Section 06: Content & Organic Strategy (required)
+## Section 06: Content & Creative Strategy (required)
+
+> **Note:** Frame content strategy as supporting paid campaigns and email — not just organic SEO. Content should feed Meta Ads creative, Google Ads landing pages, and email flows.
 
 ### Opportunity Cards (2-4 cards)
 
-#### [Card Title, e.g., "Build a Keyword-Targeted Blog Engine"]
-> [Description]
+#### [Card Title, e.g., "Build a UGC & Testimonial Content Pipeline"]
+> [Description — focus on creating content that works across paid, email, and organic]
 - [Action items]
 
-#### [Card Title]
+#### [Card Title, e.g., "Develop Educational Landing Pages for Paid Traffic"]
+> [Description — pages that support both Google Ads quality score and Meta Ads conversions]
+- [Action items]
+
+#### [Card Title] (optional)
 > [Description]
 - [Action items]
 
 ---
 
-## Section 07: Marketing Performance & Insights (required)
+## Section 07: Marketing Performance, Email & Insights (required)
 
 ### Marketing Funnel Health (for funnel diagram)
 
 | Stage | Status Label | Status Description |
 |-------|-------------|-------------------|
-| Awareness | [e.g., Weak] | [e.g., No TikTok/YouTube, DA 21, minimal organic visibility] |
-| Consideration | [e.g., Moderate] | [e.g., Science story is strong but hard to find] |
-| Conversion | [e.g., Needs Work] | [e.g., Complex purchase flow, no quiz, weak CTAs] |
+| Awareness | [e.g., Weak] | [e.g., No paid social, low DA, minimal organic visibility] |
+| Consideration | [e.g., Moderate] | [e.g., Strong story but no paid or retargeting to surface it] |
+| Conversion | [e.g., Needs Work] | [e.g., No quiz, weak CTAs, no optimized landing pages] |
 | Retention | [e.g., Strong] | [e.g., High repeat rate, passionate community] |
+
+### Email Automation & Monthly Promotions (required)
+> **IMPORTANT:** Be honest that we typically have limited visibility into a prospect's email platform. Frame observations as external assessments based on what we can observe (sign-up flows, welcome emails, promotional cadence) rather than claims about their internal setup.
+
+#### What We Can Observe
+- [e.g., Basic welcome email exists but appears to be a single message, not a multi-step flow]
+- [e.g., No visible abandoned cart recovery emails]
+- [e.g., Promotional emails appear infrequent — roughly monthly or less]
+- [e.g., No visible segmentation in emails received]
+
+#### Recommended Email Flows
+| Flow | Priority (High/Medium/Low) | Description |
+|------|---------------------------|-------------|
+| [Welcome Series] | [High] | [5-7 email sequence educating new subscribers] |
+| [Abandoned Cart] | [High] | [3-email recovery sequence with incentive escalation] |
+| [Post-Purchase] | [Medium] | [Cross-sell, review request, reorder reminder] |
+| [Browse Abandonment] | [Medium] | [Re-engage visitors who viewed but didn't add to cart] |
+| [Win-Back] | [Low] | [Re-engage lapsed customers at 60/90/120 days] |
+
+#### Monthly Promotional Strategy
+- [e.g., Establish consistent 2-4x/month promotional cadence]
+- [e.g., Segment by purchase history, engagement level, and product interest]
+- [e.g., A/B test subject lines and send times to optimize open rates]
 
 ### Market Tailwinds (3-4 bullet points)
 - [Tailwind 1, e.g., Clean beauty market growing 12% YoY]
@@ -262,17 +334,17 @@
 - [Tailwind 3]
 
 ### Market Headwinds (3-4 bullet points)
-- [Headwind 1, e.g., Larger brands increasing clean beauty claims]
+- [Headwind 1, e.g., Larger brands increasing paid media spend in category]
 - [Headwind 2]
 - [Headwind 3]
 
 ### Key Marketing Insights (2-4 opportunity cards)
 
-#### [Insight Title, e.g., "The Education Gap Is the Biggest Barrier"]
-> [1-2 sentence description]
+#### [Insight Title, e.g., "Paid Social Could Unlock the Awareness Gap"]
+> [1-2 sentence description — tie back to MRKT's core services]
 
-#### [Insight Title]
-> [Description]
+#### [Insight Title, e.g., "Email Is Likely Leaving Revenue on the Table"]
+> [Description — honest but frame the opportunity]
 
 ---
 
@@ -313,30 +385,34 @@
 - [Item]
 
 ### Top 5 Priorities (numbered cards with action items)
+> Order should reflect MRKT's core services: Paid Social → CRO → Email → Paid Search → SEO Foundation
 
-#### 01 — [Priority Title]
+#### 01 — [e.g., Launch Meta Ads (Paid Social)]
 - [Action item]
 - [Action item]
 - [Action item]
 
-#### 02 — [Priority Title]
+#### 02 — [e.g., Website CRO & Conversion Flow]
 - [Action items]
 
-#### 03 — [Priority Title]
+#### 03 — [e.g., Email Automation & Promotional Calendar]
 - [Action items]
 
-#### 04 — [Priority Title]
+#### 04 — [e.g., Launch Google Ads (Paid Search)]
 - [Action items]
 
-#### 05 — [Priority Title]
+#### 05 — [e.g., SEO Foundation & Quick Wins]
 - [Action items]
 
 ### Q2 2026 Performance Targets (optional — for expandable table)
 
 | Metric | Current | Target | Growth |
 |--------|---------|--------|--------|
-| [Domain Authority] | [21] | [28-30] | [+33-43%] |
-| [Organic Keywords] | [~50] | [200+] | [+300%] |
+| [Meta Ads ROAS] | [N/A] | [3-4x] | [New channel] |
+| [Monthly Paid Revenue] | [$0] | [$15-25K] | [New channel] |
+| [Site Conversion Rate] | [1.5%] | [2.5-3%] | [+67-100%] |
+| [Email Revenue %] | [Unknown] | [20-30%] | [Establish baseline] |
+| [Domain Authority] | [21] | [25-28] | [+19-33%] |
 | ... | | | |
 
 ---
